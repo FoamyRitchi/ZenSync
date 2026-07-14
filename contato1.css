@@ -1,0 +1,317 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("img/fundo.png");
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: linear-gradient(100deg, #faf3fb 10%, #ece0ee 35%, #bb87d9 100%);
+  border-bottom: 1px solid #ddd6fe;
+  height: 80px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  
+  flex: 1;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+pre {
+  font-family: "Poppins", sans-serif;
+}
+
+pre:hover {
+  border-bottom: 1px solid #5f448e;
+}
+
+nav {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+nav .Entrar {
+  margin-left: auto;
+}
+
+.Entrar {
+  height: 20px;
+  display: flex;
+  color: #000000;
+  text-decoration: none;
+  font-size: 10.9px;
+  width: 90px;
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #c2c883 0%, #8a9554 45%, #4e6a31 100%);
+}
+
+.Entrar:hover {
+  transition: 0 all 300ms;
+  transform: scale(1.08);
+}
+
+li a {
+  color: #a970d5;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #5f448e;
+  border-bottom: 1px solid #5f448e;
+}
+
+
+
+nav ul li {
+  font-size: 11.9px;
+  font-weight: 600;
+  cursor: pointer;
+  padding-bottom: 6px;
+}
+
+nav ul li:hover {
+  transition: 0 all 300ms;
+  transform: scale(1.07);
+}
+
+nav ul li.ativo {
+  font-weight: 600;
+
+  border-bottom: 2px solid 
+}
+
+.espaco {
+  flex: 1;
+}
+
+main {
+  display: flex;
+  gap: 70px;
+  padding: 40px 60px 80px 60px;
+}
+
+.info-contato {
+  flex: 1.2;
+}
+
+.tag {
+  font-size: 13px;
+
+  margin-bottom: 8px;
+}
+
+.info-contato h1 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  font-weight: 800;
+  
+}
+
+.sub {
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+.dados p {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 22px;
+}
+
+.dados strong {
+  font-size: 14px;
+  
+  display: block;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.card-form {
+  width: 490px;
+  background: white;
+  border: 2px solid #c3c5c9;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 600;
+
+  margin-bottom: -8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #deb5e4;
+  box-shadow: 1px 2px 1px #deb5e4;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  background: white;
+  background-color: #fcf7fd;
+}
+
+form select{
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #deb5e4;
+  box-shadow: 1px 2px 1px #deb5e4;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  background: white;
+  background-color: #fcf7fd;
+}
+
+
+
+textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+span {
+  color: #7e8e61;
+}
+
+.select-fake {
+  position: relative;
+}
+.select-fake select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  appearance: none;
+  background: white;
+  color: #9ca3af;
+}
+.select-fake .seta {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.btn-enviar {
+  background: linear-gradient(90deg, #b8a2c9 10%, #ae8ec6 45%, #693c94 100%);
+  height: 23px;
+  border: none;
+  padding: 10px 10px 10px 11px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor:pointer;
+  margin-top: 4px;
+  display: flex;
+  align-self: flex-end;
+  width: 130px;
+  text-align: center;
+  font-size: 11px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-enviar:hover{
+  transform: scaleX(1.08);
+  transition: 0 all 300ms;
+ 
+  
+}
+
+footer {
+  padding: 20px 60px;
+  background:#F8F1F9;
+  border-top: 1px solid #ddd6fe;
+  height: 100%;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  
+  font-style: italic;
+}
+
+.footer-left img {
+  width:30px;
+  height: 30px;
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 30px;
+  }
+  .card-form {
+    flex: 1;
+  }
+  nav ul {
+    display: none;
+  }
+  header,
+  footer {
+    padding: 20px 30px;
+  }
+  .espaco {
+    display: none;
+  }
+}

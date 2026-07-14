@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - ZenSync</title>
+    <link rel="stylesheet" href="contato1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img  src="img/logo.png" 
+      alt="logo"/>
+      <p class="logo">ZenSync</p></a>
+
+      <nav>
+        <ul>
+          
+          <li><a href="Biblioteca.html">Biblioteca</a></li>
+          <li><a href="Avaliação.html">Avaliação</a></li>
+          <li><a href="Area-do-funcionario.html"><pre>Área do Funcionário</pre></a></li>
+          <li><a href="Sugestoes-e-ideias.html"><pre>Sugestões e Ideias</pre></a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <a class="Entrar" href="Entrar.html">Entrar</a>
+        </ul>
+      </nav>
+      <div class="espaco"></div>
+    </header>
+
+    <main>
+      <section class="info-contato">
+        <p class="tag">Contato</p>
+        <h1>
+          Vamos transformar <br /><span>o bem-estar da sua<br />equipe?</span>
+        </h1>
+        <p class="sub">
+          Conte um pouco sobre sua empresa,em até 1 dia útil, <br />
+          um especialista entrará em contato para entender seu <br />
+          cenário
+        </p>
+
+        <article class="dados">
+          <p>E-mail</p>
+          <strong>contato@zensync.com</strong>
+
+          <p>Telefone</p>
+          <strong>+55 (11) 67676767</strong>
+
+          <p>Endereço</p>
+          <strong>Av. Professor Fonseca Rodrigues 2001</strong>
+        </article>
+      </section>
+
+      <section class="card-form">
+        <form class="tam">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" />
+
+          <label for="email">E-mail corporativo</label>
+          <input type="email" id="email" />
+
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" />
+
+          <label for="setor">Qual o seu setor?</label>
+          
+            <select id="setor" name="setor" required>
+             
+              <optgroup>
+                <option value=""selected disabled>Selecione o Setor</option>
+                <option value="vendedor">Vendedor de comércio varejista</option>
+                <option value="Faxineiro">Faxineiro</option>
+                <option value="auxiliar">Auxiliar de escritório</option>
+                <option value="assistente">Assistente administrativo</option>
+              </optgroup>
+            </select>
+            
+         
+
+          <label for="mensagem"><span></span>Mensagem</label>
+          <textarea id="mensagem" name= mensagem placeholder="Digite aqui sua Mensagem"></textarea>
+
+          <button type="button" class="btn-enviar">Enviar mensagem</button>
+        </form>
+      </section>
+    
+    
+    
+    </main>
+
+    <footer>
+      <div class="footer-left">
+        <img
+          src="img/logo.png"
+          alt="logo ZenSync"
+        />
+        <span>@ 2026 Zensync</span>
+      </div>
+    </footer>
+  </body>
+</html>
