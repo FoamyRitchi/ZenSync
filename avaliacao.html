@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+
+    <link rel="stylesheet" href="avaliacao.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <nav class="cabecalho__nav">
+
+            <img src="logo.svg" alt="Logo da ZenSync" class="logo">
+
+            <a href="index.html" class="cabecalho__nav__link">Home</a>
+            <a href="area_funcionario.html" class="cabecalho__nav__link">Área do Funcionário</a>
+            <a href="biblioteca.html" class="cabecalho__nav__link">Biblioteca</a>
+            <a href="sugestoes.html" class="cabecalho__nav__link">Sugestões e Ideias</a>
+
+            <div class="cabecalho__nav__usuario">
+                <img src="user_icon.png" alt="Foto do usuário" class="cabecalho__nav__usuario__foto">
+                <p class="cabecalho__nav__usuario__texto">Olá, [Nome]</p>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="principal">
+
+        <!-- Etapas -->
+        <section class="etapas">
+
+            <div class="stepper">
+
+                <div class="step active">
+                    <span>1</span>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="step">
+                    <span>2</span>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="step">
+                    <span>3</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Perguntas -->
+        <section class="avaliacao">
+
+            <!-- Pergunta 1 -->
+            <article class="question-card">
+
+                <div class="question-header">
+
+                    <div class="icon">
+                        ❤️
+                    </div>
+
+                    <h3>
+                        Como você julga que está sua saúde mental no momento?
+                    </h3>
+
+                </div>
+
+                <div class="rating">
+
+                    <span class="scale-label">Ruim</span>
+
+                    <input type="radio" name="q1" id="q1-1">
+                    <label for="q1-1">1</label>
+
+                    <input type="radio" name="q1" id="q1-2">
+                    <label for="q1-2">2</label>
+
+                    <input type="radio" name="q1" id="q1-3">
+                    <label for="q1-3">3</label>
+
+                    <input type="radio" name="q1" id="q1-4">
+                    <label for="q1-4">4</label>
+
+                    <input type="radio" name="q1" id="q1-5">
+                    <label for="q1-5">5</label>
+
+                    <input type="radio" name="q1" id="q1-6">
+                    <label for="q1-6">6</label>
+
+                    <input type="radio" name="q1" id="q1-7">
+                    <label for="q1-7">7</label>
+
+                    <input type="radio" name="q1" id="q1-8">
+                    <label for="q1-8">8</label>
+
+                    <input type="radio" name="q1" id="q1-9">
+                    <label for="q1-9">9</label>
+
+                    <input type="radio" name="q1" id="q1-10">
+                    <label for="q1-10">10</label>
+
+                    <span class="scale-label">Excelente</span>
+
+                </div>
+
+            </article>
+
+            <!-- Pergunta 2 -->
+<article class="question-card">
+
+    <div class="question-header">
+        <div class="icon">🧠</div>
+
+        <h3>
+            Você tem se sentido muito nervoso, ansioso ou depressivo?
+        </h3>
+    </div>
+
+    <table class="matrix">
+
+        <tr>
+            <td>Nervoso</td>
+
+            <td><input type="radio" name="nervoso" value="1"></td>
+            <td><input type="radio" name="nervoso" value="2"></td>
+            <td><input type="radio" name="nervoso" value="3"></td>
+            <td><input type="radio" name="nervoso" value="4"></td>
+            <td><input type="radio" name="nervoso" value="5"></td>
+            <td><input type="radio" name="nervoso" value="6"></td>
+            <td><input type="radio" name="nervoso" value="7"></td>
+            <td><input type="radio" name="nervoso" value="8"></td>
+            <td><input type="radio" name="nervoso" value="9"></td>
+            <td><input type="radio" name="nervoso" value="10"></td>
+
+        </tr>
+
+        <tr>
+
+            <td>Ansioso</td>
+
+            <td><input type="radio" name="ansioso" value="1"></td>
+            <td><input type="radio" name="ansioso" value="2"></td>
+            <td><input type="radio" name="ansioso" value="3"></td>
+            <td><input type="radio" name="ansioso" value="4"></td>
+            <td><input type="radio" name="ansioso" value="5"></td>
+            <td><input type="radio" name="ansioso" value="6"></td>
+            <td><input type="radio" name="ansioso" value="7"></td>
+            <td><input type="radio" name="ansioso" value="8"></td>
+            <td><input type="radio" name="ansioso" value="9"></td>
+            <td><input type="radio" name="ansioso" value="10"></td>
+
+        </tr>
+
+        <tr>
+
+            <td>Depressivo</td>
+
+            <td><input type="radio" name="depressivo" value="1"></td>
+            <td><input type="radio" name="depressivo" value="2"></td>
+            <td><input type="radio" name="depressivo" value="3"></td>
+            <td><input type="radio" name="depressivo" value="4"></td>
+            <td><input type="radio" name="depressivo" value="5"></td>
+            <td><input type="radio" name="depressivo" value="6"></td>
+            <td><input type="radio" name="depressivo" value="7"></td>
+            <td><input type="radio" name="depressivo" value="8"></td>
+            <td><input type="radio" name="depressivo" value="9"></td>
+            <td><input type="radio" name="depressivo" value="10"></td>
+
+        </tr>
+
+    </table>
+
+</article>
+
+<!-- Pergunta 3 -->
+<article class="question-card">
+
+    <div class="question-header">
+
+        <div class="icon">💼</div>
+
+        <h3>
+            Você acha que seu estado de saúde mental tem atrapalhado seu desempenho no trabalho ou impactado negativamente suas relações?
+        </h3>
+
+    </div>
+
+    <div class="rating">
+
+        <span class="scale-label">Ruim</span>
+
+        <input type="radio" id="q3-1" name="q3"><label for="q3-1">1</label>
+        <input type="radio" id="q3-2" name="q3"><label for="q3-2">2</label>
+        <input type="radio" id="q3-3" name="q3"><label for="q3-3">3</label>
+        <input type="radio" id="q3-4" name="q3"><label for="q3-4">4</label>
+        <input type="radio" id="q3-5" name="q3"><label for="q3-5">5</label>
+        <input type="radio" id="q3-6" name="q3"><label for="q3-6">6</label>
+        <input type="radio" id="q3-7" name="q3"><label for="q3-7">7</label>
+        <input type="radio" id="q3-8" name="q3"><label for="q3-8">8</label>
+        <input type="radio" id="q3-9" name="q3"><label for="q3-9">9</label>
+        <input type="radio" id="q3-10" name="q3"><label for="q3-10">10</label>
+
+        <span class="scale-label">Excelente</span>
+
+    </div>
+
+</article>
+
+<!-- Pergunta 4 -->
+<article class="question-card">
+
+    <div class="question-header">
+
+        <div class="icon">🌙</div>
+
+        <h3>
+            Você tem conseguido dormir bem e ter um tempo de lazer fora do ambiente de trabalho?
+        </h3>
+
+    </div>
+
+    <div class="rating">
+
+        <span class="scale-label">Ruim</span>
+
+        <input type="radio" id="q4-1" name="q4"><label for="q4-1">1</label>
+        <input type="radio" id="q4-2" name="q4"><label for="q4-2">2</label>
+        <input type="radio" id="q4-3" name="q4"><label for="q4-3">3</label>
+        <input type="radio" id="q4-4" name="q4"><label for="q4-4">4</label>
+        <input type="radio" id="q4-5" name="q4"><label for="q4-5">5</label>
+        <input type="radio" id="q4-6" name="q4"><label for="q4-6">6</label>
+        <input type="radio" id="q4-7" name="q4"><label for="q4-7">7</label>
+        <input type="radio" id="q4-8" name="q4"><label for="q4-8">8</label>
+        <input type="radio" id="q4-9" name="q4"><label for="q4-9">9</label>
+        <input type="radio" id="q4-10" name="q4"><label for="q4-10">10</label>
+
+        <span class="scale-label">Excelente</span>
+
+    </div>
+
+</article>
+
+<!-- Botões -->
+<div class="buttons">
+
+    <button class="btn-secondary">
+        Voltar
+    </button>
+
+    <button class="btn-primary">
+        Próximo
+    </button>
+
+</div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

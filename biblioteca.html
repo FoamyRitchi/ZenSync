@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+
+    <link rel="stylesheet" href="biblioteca.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__nav">
+            <img src="logo.svg" alt="Logo da ZenSync" class="logo" >
+
+            <a href="index.html" class="cabecalho__nav__link">Home</a>
+            <a href="area_funcionario.html" class="cabecalho__nav__link">Area do Funcionario</a>
+            <a href="biblioteca.html" class="cabecalho__nav__link">Biblioteca</a>
+            <a href="sugestoes.html" class="cabecalho__nav__link">Sugestões e ideias</a>
+
+            <div class="cabecalho__nav__usuario">
+                <img src="user_icon.png" alt="Foto do usuário" class="cabecalho__nav__usuario__foto">
+                <p class="cabecalho__nav__usuario__texto">Olá, [Nome]</p>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+            <div class="sidebar__conteudo">
+                <div class="sidebar__conteudo__logo">
+                    <h2 class="sidebar__conteudo__logo__texto">BIBLIOTECA</h2>
+                </div>
+
+                <button class="btn-salvos">
+                    <span>Salvos</span>
+                    <img src="img/bookmark.svg" alt="">
+                </button>
+            </div>
+
+            <button class="btn__logout" type="button">
+                <img src="#" alt="">
+                <span>Sair</span>
+            </button>
+        </aside>
+
+        <!-- CONTEÚDO -->
+        <main class="principal">
+
+    <!-- Banner -->
+    <section class="banner__search">
+
+    <div class="banner__search__content">
+
+        <h2 class="banner__search__title">
+            Conteúdos selecionados para apoiar sua
+            saúde emocional e bem-estar no trabalho.
+        </h2>
+
+        <div class="banner__search__box">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 100-15 7.5 7.5 0 000 15z"/>
+
+            </svg>
+
+            <input
+                type="text"
+                placeholder="Buscar conteúdos, temas ou palavras-chave..."
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Destaques -->
+    <section class="destaques">
+
+        <div class="destaques__topo">
+
+            <div class="destaques__botoes">
+
+                <button class="btn__todos">
+                    Todos
+                </button>
+
+                <button class="btn__filtrar">
+                    <img src="img/filter.svg" alt="">
+                    <span>Filtrar</span>
+                </button>
+
+            </div>
+
+            <h2 class="texto__verde">
+                Destaques para você
+            </h2>
+
+        </div>
+
+        <div class="cards">
+
+            <!-- CARD 1 -->
+
+            <article class="card">
+
+                <div class="card__cabecalho card__imagem__artigo">
+
+                    <span class="tag artigo">
+                        Artigo
+                    </span>
+
+                    <div class="tempo">
+                        <img src="relogio.png" alt="">
+                        <span>5 min</span>
+                    </div>
+
+                </div>
+
+                <div class="card__conteudo">
+
+                    <h3>
+                        Respire, desacelere e recupere o foco
+                    </h3>
+
+                    <p>
+                        Técnicas simples de respiração para reduzir o estresse no dia a dia.
+                    </p>
+
+                    <button class="card__seta">
+                        →
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- CARD 2 -->
+
+            <article class="card">
+
+                <div class="card__cabecalho card__imagem__video">
+
+                    <span class="tag video">
+                        Vídeo
+                    </span>
+
+                    <div class="tempo">
+                        <img src="relogio.png" alt="Tempo">
+                        <span>8 min</span>
+                    </div>
+
+                </div>
+
+
+                <div class="card__conteudo">
+
+                    <h3>
+                        Entendendo o burnout: causas e sinais
+                    </h3>
+
+                    <p>
+                        Aprenda a identificar os sinais de esgotamento e como prevenir.
+                    </p>
+
+                    <button class="card__seta">
+                        →
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- CARD 3 -->
+
+            <article class="card">
+
+                <div class="card__cabecalho card__imagem__guia">
+
+                    <span class="tag guia">
+                        Guia
+                    </span>
+
+                    <div class="tempo">
+                        <img src="relogio.png" alt="Tempo">
+                        <span>7 min</span>
+                    </div>
+
+                </div>
+
+                <div class="card__conteudo">
+                    <h3>Guia prático de autocuidado</h3>
+                    <p>Pequenas ações diárias que fazem uma grande diferença.</p>
+                    <button class="card__seta">
+                        →
+                    </button>
+                </div>
+            </article>
+
+            <!-- CARD 4 -->
+
+            <article class="card">
+                <div class="card__cabecalho card__imagem__podcast">
+                    <span class="tag podcast">
+                        Podcast
+                    </span>
+                    <div class="tempo">
+                        <img src="relogio.png" alt="Tempo">
+                        <span>12 min</span>
+                    </div>
+                </div>
+
+                <div class="card__conteudo">
+                    <h3>Saúde mental em conversas reais</h3>
+                    <p>Histórias e dicas para melhorar sua relação com o trabalho.</p>
+                    <button class="card__seta">
+                        →
+                    </button>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="temas">
+
+    <div class="temas-esquerda">
+
+        <h2>Explore por tema</h2>
+
+        <div class="cards__tema">
+
+            <article class="card__tema verde">
+                <div class="icone">🌿</div>
+                <h3>Estresse</h3>
+                <p>Estratégias para lidar melhor com a pressão e o estresse diário.</p>
+
+                <div class="card__footer">
+                    <span>12 conteúdos</span>
+                    <span>→</span>
+                </div>
+            </article>
+
+            <article class="card__tema laranja">
+                <div class="icone">🔥</div>
+                <h3>Burnout</h3>
+                <p>Entenda o esgotamento profissional e como prevenir.</p>
+
+                <div class="card__footer">
+                    <span>9 conteúdos</span>
+                    <span>→</span>
+                </div>
+            </article>
+
+            <article class="card__tema roxo">
+                <div class="icone">💜</div>
+                <h3>Autocuidado</h3>
+                <p>Práticas para cuidar de você e ter mais equilíbrio.</p>
+
+                <div class="card__footer">
+                    <span>15 conteúdos</span>
+                    <span>→</span>
+                </div>
+            </article>
+
+            <article class="card__tema azul">
+                <div class="icone">🧠</div>
+                <h3>Ansiedade</h3>
+                <p>Dicas e exercícios para acalmar a mente e o corpo.</p>
+
+                <div class="card__footer">
+                    <span>10 conteúdos</span>
+                    <span>→</span>
+                </div>
+            </article>
+
+            <article class="card__tema ciano">
+                <div class="icone">🌙</div>
+                <h3>Sono</h3>
+                <p>Melhore a qualidade do seu sono e sua energia diária.</p>
+
+                <div class="card__footer">
+                    <span>10 conteúdos</span>
+                    <span>→</span>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+    <div class="temas-direita">
+
+        <div class="titulo">
+            <h2>Conteúdos recomendados</h2>
+            <a href="#">Ver todos →</a>
+        </div>
+
+        <div class="lista">
+            <div class="item">
+                <div>
+                    <strong>Manhã produtiva: comece o dia com mais energia</strong>
+                    <p>Rotinas matinais que melhoram seu humor e produtividade.</p>
+                </div>
+
+                <div class="info">
+                    <span style="color: #1ac000; font-weight: bold;">Artigo</span>
+                    <span>4 min</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <strong>Higiene do sono: pequenas mudanças, grandes resultados</strong>
+                    <p>Aprenda hábitos noturnos que fazem diferença.</p>
+                </div>
+
+                <div class="info">
+                    <span style="color: #4400ff; font-weight: bold;">Vídeo</span>
+                    <span>6 min</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <strong>Alongamentos rápidos para aliviar a tensão</strong>
+                    <p>Exercícios simples para fazer no trabalho.</p>
+                </div>
+
+                <div class="info">
+                    <span style="color: #D8A72F; font-weight: bold;">Guia</span>
+                    <span>5 min</span>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <strong>Comunicação saudável no ambiente de trabalho</strong>
+                    <p>Como diálogos respeitosos constroem um ambiente melhor;</p>
+                </div>
+
+                <div class="info">
+                    <span style="color: #3a89f8; font-weight: bold;">Podcast</span>
+                    <span>7 min</span>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="banner__final">
+
+    <div class="banner__final__image">
+        <img src="img/reading-girl.png" alt="Mulher lendo">
+    </div>
+
+    <div class="banner__final__content">
+        <h2 class="banner__final__title">
+            Aprender é cuidar de você.
+        </h2>
+
+        <p class="banner__final__description">
+            Acesse conteúdos sempre que precisar e fortaleça
+            sua saúde emocional todos os dias.
+        </p>
+    </div>
+
+    <div class="banner__final__icon-area">
+        <div class="banner__final__icon-circle">
+            💜
+        </div>
+    </div>
+
+</section>
+
+</main>
+
+
+
+    </body>
+</html>
