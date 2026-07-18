@@ -12,6 +12,12 @@ body {
   min-height: 100vh;
 }
 
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .conteudo {
   flex: 1;
   margin-left: 240px;
@@ -142,3 +148,23 @@ nav a{
   justify-content: right;
   padding: 10px;
 }
+
+.tabela-setores{
+  display: flex;
+  flex-direction: column;
+  border: solid 1px;
+  gap: 20px;
+  text-align: center;
+  
+
+}
+
+.tabela-setores h2{
+  justify-content: left;
+  display: flex;
+  font-size: 15px;
+}
+
+
+
+
