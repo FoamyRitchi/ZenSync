@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -34,7 +34,7 @@ header {
 
 .sidebar {
   width: 235px;
-  background-color: aqua;
+  background-color: #f6d5fc;
   position: fixed;
 
   display: flex;
@@ -51,6 +51,16 @@ header {
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 22px;
+  font-weight: 700;
+  color: #5b50ff;
+}
+
 nav ul {
   display: flex;
   flex-direction: column;
@@ -62,10 +72,10 @@ nav ul {
   list-style: none;
 }
 
-nav a{
-    list-style: none;
-    text-decoration: none;
-    color: black;
+nav a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
 }
 
 .hero-principal {
@@ -82,7 +92,7 @@ nav a{
 
 .hero-cards {
   display: flex;
-  gap: 10px;
+  gap: 1px;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -105,7 +115,7 @@ nav a{
 }
 
 .card2 {
-  background-color: #d8e5dd;
+  background-color: #f9e9ce;
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -120,7 +130,7 @@ nav a{
 }
 
 .card3 {
-  background-color: #d8e5dd;
+  background-color: #faebfc;
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -135,7 +145,7 @@ nav a{
 }
 
 .card4 {
-  background-color: #d8e5dd;
+  background-color: #b9c7f9;
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -149,22 +159,48 @@ nav a{
   padding: 10px;
 }
 
-.tabela-setores{
+.tabela-setores {
   display: flex;
   flex-direction: column;
-  border: solid 1px;
-  gap: 20px;
+  border: solid grey 1px;
+  gap: 10px;
   text-align: center;
-  
+  height: 100%;
 
+  border-radius: 20px;
 }
 
-.tabela-setores h2{
+.tabela-setores h2 {
   justify-content: left;
   display: flex;
   font-size: 15px;
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 0px 20px;
+}
 
+th{
+  background-color: rgb(192, 183, 244);
+}
 
+.relatorio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #faebfc;
+  border: solid 0.2px grey;
+  border-radius: 12px;
+  height:80px;
+  text-align: center;
+  
+}
 
+.exportar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d8e5dd;
+}
