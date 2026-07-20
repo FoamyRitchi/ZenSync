@@ -1,0 +1,1326 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(to bottom,#f8fcfa,#ffffff,#f6f3ff);
+
+    color:#3b3b3b;
+
+    overflow-x:hidden;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+
+/* ==========================================================
+   CORES
+========================================================== */
+
+:root{
+
+    --roxo:#6E4FA8;
+    --roxo-claro:#BCA8E6;
+
+    --verde:#63B87A;
+    --verde-claro:#DDF4E3;
+
+    --azul:#A9D9F7;
+
+    --branco:#ffffff;
+
+    --texto:#424242;
+
+    --cinza:#6f6f6f;
+
+}
+
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.top-bar{
+
+    width:100%;
+
+    height:90px;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(15px);
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.top-bar nav ul li a:hover{
+
+    color:var(--roxo);
+
+}
+
+.top-bar-content,
+
+.top-bar{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.top-bar{
+
+    justify-content:space-between;
+
+    padding:0 9%;
+
+}
+
+.logo h2{
+
+    color:var(--roxo);
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:45px;
+
+}
+
+nav a{
+
+    color:#555;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--verde);
+
+}
+
+
+
+/* ==========================================================
+   BOTÃO LOGIN
+========================================================== */
+
+.btn-login{
+
+    background:linear-gradient(135deg,var(--verde),#26662d);
+
+    color:white;
+
+    padding:13px 28px;
+
+    border-radius:40px;
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.btn-login:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(35, 114, 50, 0.35);
+
+}
+
+
+
+
+
+.hero{
+
+    width:100%;
+
+    height:100vh;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+.hero img{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(255,255,255,.25),
+
+        rgba(255,255,255,.55),
+
+        rgba(255,255,255,.82)
+
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.tag{
+
+    display:inline-block;
+
+    background:var(--verde-claro);
+
+    color:var(--verde);
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    margin-bottom:30px;
+
+}
+
+.hero h1{
+
+    font-size:68px;
+
+    line-height:1.1;
+
+    color:var(--roxo);
+
+    margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+    color:var(--verde);
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    color:#555;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+}
+
+
+
+/* ==========================================================
+   BOTÕES HERO
+========================================================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-principal{
+
+    background:linear-gradient(135deg,var(--verde),#104c0d);
+
+    color:white;
+
+    padding:18px 35px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    transition:.35s;
+
+}
+
+.btn-principal:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 35px rgba(110,79,168,.30);
+
+}
+
+.btn-secundario{
+
+    background:white;
+
+    color:var(--roxo);
+
+    padding:18px 35px;
+
+    border-radius:50px;
+
+    border:2px solid var(--roxo-claro);
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn-secundario:hover{
+
+    background:var(--roxo);
+
+    color:white;
+
+}
+
+
+
+/* ==========================================================
+   ELEMENTOS DECORATIVOS
+========================================================== */
+
+.decoracao{
+
+    position:absolute;
+
+    z-index:2;
+
+    opacity:.8;
+
+}
+
+.folha1{
+
+    left:5%;
+
+    top:25%;
+
+    color:var(--verde);
+
+    font-size:55px;
+
+    transform:rotate(-20deg);
+
+}
+
+.folha2{
+
+    right:8%;
+
+    bottom:20%;
+
+    color:#77C98C;
+
+    font-size:70px;
+
+    transform:rotate(30deg);
+
+}
+
+.flor1{
+
+    right:18%;
+
+    top:18%;
+
+    color:var(--roxo);
+
+    font-size:55px;
+
+}
+
+.nuvem{
+
+    left:15%;
+
+    bottom:18%;
+
+    color:white;
+
+    font-size:85px;
+
+}
+
+
+
+/* ==========================================================
+   TÍTULOS PADRÃO
+========================================================== */
+
+.titulo{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.titulo span{
+
+    color:var(--verde);
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.titulo h2{
+
+    font-size:48px;
+
+    color:var(--roxo);
+
+    margin-top:15px;
+
+    margin-bottom:18px;
+
+}
+
+.titulo p{
+
+    color:#666;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   SOBRE
+========================================================== */
+
+.sobre{
+    padding:120px 10%;
+    background:#ffffff;
+}
+
+.sobre-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.sobre-texto{
+    flex:1;
+    min-width:320px;
+}
+
+.sobre-texto p{
+    color:var(--cinza);
+    line-height:1.9;
+    margin-bottom:25px;
+    font-size:17px;
+}
+
+.btn-saiba{
+    display:inline-block;
+    margin-top:15px;
+    padding:15px 35px;
+    border-radius:40px;
+    background:var(--verde);
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-saiba:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(99,184,122,.35);
+}
+
+.sobre-card{
+    flex:1;
+    min-width:300px;
+    background:linear-gradient(145deg,#ffffff,#f6f3ff);
+    border-radius:30px;
+    padding:45px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+.sobre-card .icone{
+    width:90px;
+    height:90px;
+    margin:auto;
+    margin-bottom:25px;
+    background:var(--roxo-claro);
+    color:var(--roxo);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+}
+
+.sobre-card h3{
+    color:var(--roxo);
+    margin-bottom:15px;
+}
+
+.sobre-card p{
+    color:var(--cinza);
+    line-height:1.8;
+}
+
+/
+
+.recursos{
+    padding:120px 10%;
+    background:#f8fcfa;
+}
+
+.cards-recursos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+.card-recurso{
+    background:white;
+    padding:40px 30px;
+    border-radius:28px;
+    text-align:center;
+    transition:.35s;
+    box-shadow:0 15px 30px rgba(0,0,0,.06);
+}
+
+.card-recurso:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+.icone-card{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--verde-claro),#ffffff);
+    color:var(--verde);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    margin-bottom:25px;
+    font-size:34px;
+}
+
+.card-recurso h3{
+    color:var(--roxo);
+    margin-bottom:15px;
+}
+
+.card-recurso p{
+    color:var(--cinza);
+    line-height:1.8;
+}
+
+
+
+.humor{
+    padding:110px 10%;
+    text-align:center;
+    background:#ffffff;
+}
+
+.emocoes{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:50px;
+}
+
+.emocoes button{
+    width:90px;
+    height:90px;
+    border:none;
+    border-radius:50%;
+    background:#f4f4f4;
+    font-size:40px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.emocoes button:hover{
+    transform:scale(1.12);
+    background:var(--verde-claro);
+}
+
+/* ==========================================================
+   DICA DO DIA
+========================================================== */
+
+.dica-dia{
+    padding:100px 10%;
+    background:#f6f3ff;
+}
+
+.dica-card{
+    max-width:950px;
+    margin:auto;
+    background:white;
+    border-radius:30px;
+    padding:45px;
+    display:flex;
+    gap:30px;
+    align-items:center;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+.icone-dica{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:var(--roxo-claro);
+    color:var(--roxo);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    flex-shrink:0;
+}
+
+.dica-card h3{
+    color:var(--roxo);
+    margin-bottom:12px;
+}
+
+.dica-card p{
+    color:var(--cinza);
+    line-height:1.8;
+}
+
+/* ==========================================================
+   RESPIRAÇÃO
+========================================================== */
+
+.respiracao{
+    padding:120px 10%;
+    background:linear-gradient(135deg,#dff7e8,#edf5ff);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.respiracao-texto{
+    flex:1;
+    min-width:300px;
+}
+
+.respiracao-texto span{
+    color:var(--verde);
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.respiracao-texto h2{
+    font-size:48px;
+    color:var(--roxo);
+    margin:18px 0;
+}
+
+.respiracao-texto p{
+    color:var(--cinza);
+    line-height:1.9;
+    max-width:550px;
+}
+
+.btn-respirar{
+    padding:18px 35px;
+    background:var(--verde);
+    color:white;
+    border-radius:50px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    transition:.3s;
+}
+
+.btn-respirar:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(99,184,122,.35);
+}
+
+/* ==========================================================
+   FRASE
+========================================================== */
+
+.frase{
+    padding:110px 10%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.frase blockquote{
+    max-width:900px;
+    margin:auto;
+    font-size:34px;
+    color:var(--roxo);
+    font-weight:600;
+    line-height:1.7;
+    font-style:italic;
+}
+
+/* ==========================================================
+   CONTEÚDOS
+========================================================== */
+
+.conteudos{
+    padding:120px 10%;
+    background:#ffffff;
+}
+
+.conteudos-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.conteudo-card{
+
+    background:#fff;
+
+    padding:40px 30px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.conteudo-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.conteudo-card i{
+
+    font-size:42px;
+
+    color:var(--roxo);
+
+    margin-bottom:25px;
+
+}
+
+.conteudo-card h3{
+
+    color:var(--roxo);
+
+    margin-bottom:15px;
+
+}
+
+.conteudo-card p{
+
+    color:var(--cinza);
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.conteudo-card a{
+
+    color:var(--verde);
+
+    font-weight:600;
+
+}
+
+.conteudo-card a:hover{
+
+    color:var(--roxo);
+
+}
+
+
+
+.sugestoes{
+
+    padding:120px 10%;
+
+    background:#f8fcfa;
+
+}
+
+.sugestoes form{
+
+    max-width:850px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.sugestoes textarea{
+
+    width:100%;
+
+    height:220px;
+
+    resize:none;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+    background:#ffffff;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.06);
+
+}
+
+.sugestoes button{
+
+    align-self:center;
+
+    padding:18px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:var(--roxo);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.sugestoes button:hover{
+
+    background:var(--verde);
+
+    transform:translateY(-4px);
+
+}
+
+
+
+.cta-final{
+
+    padding:120px 10%;
+
+    background:linear-gradient(135deg,#4a894e,#7E66C2);
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.cta-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.15);
+
+    margin-bottom:30px;
+
+    font-weight:600;
+
+}
+
+.cta-final h2{
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+}
+
+.cta-final p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    margin-bottom:45px;
+
+    opacity:.95;
+
+}
+
+.cta-botoes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.cta-final .btn-principal{
+
+    background:#ffffff;
+
+    color:var(--roxo);
+
+}
+
+.cta-final .btn-principal:hover{
+
+    background:#f5f5f5;
+
+}
+
+.cta-final .btn-secundario{
+
+    border:2px solid white;
+
+    color:white;
+
+    background:transparent;
+
+}
+
+.cta-final .btn-secundario:hover{
+
+    background:white;
+
+    color:var(--roxo);
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer{
+
+    background:#2f204d;
+
+    color:#ffffff;
+
+}
+
+.footer-container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:70px 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:50px;
+
+}
+
+.footer-col h2,
+.footer-col h3{
+
+    margin-bottom:20px;
+
+}
+
+.footer-col p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
+
+}
+
+.footer-col ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.footer-col a{
+
+    color:#d8d8d8;
+
+    transition:.3s;
+
+}
+
+.footer-col a:hover{
+
+    color:var(--verde-claro);
+
+}
+
+.redes{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.redes a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.1);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.redes a:hover{
+
+    background:var(--verde);
+
+    transform:translateY(-4px);
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    padding:25px 10%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.footer-links span{
+
+    color:#999;
+
+}
+
+
+
+@media (max-width:992px){
+
+    .hero h1{
+
+        font-size:52px;
+
+    }
+
+    .titulo h2{
+
+        font-size:38px;
+
+    }
+
+    .sobre-container{
+
+        flex-direction:column;
+
+    }
+
+    .respiracao{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .respiracao-texto p{
+
+        margin:auto;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .top-bar{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px;
+
+        gap:20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:20px;
+
+    }
+
+    .hero{
+
+        padding-top:140px;
+
+        height:auto;
+
+        min-height:100vh;
+
+    }
+
+    .hero h1{
+
+        font-size:40px;
+
+    }
+
+    .hero p{
+
+        font-size:17px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .dica-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .cta-final h2{
+
+        font-size:36px;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .hero h1{
+
+        font-size:32px;
+
+    }
+
+    .titulo h2{
+
+        font-size:30px;
+
+    }
+
+    .respiracao-texto h2{
+
+        font-size:34px;
+
+    }
+
+    .frase blockquote{
+
+        font-size:24px;
+
+    }
+
+}

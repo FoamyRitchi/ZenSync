@@ -2,171 +2,63 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Setores-Zensink</title>
+    <title>Setores - ZenSync</title>
     <link rel="stylesheet" href="setores.css" />
   </head>
   <body>
-    <aside class="sidebar">
-      <div class="logo">
-        <img src="img/logo.png" alt="logo" width="50" height="50" />
-        <span>Zensink</span>
-      </div>
+    <div class="container">
+      <aside class="sidebar">
+        <div>
+          <div class="logo"><span>🟣</span><span>ZenSync</span></div>
+          <nav>
+            <ul>
+              <li><a href="#"><span>🏠</span> Home</a></li>
+              <li><a href="#"><span>👤</span> Área do Funcionário</a>
+                <ul class="submenu"><li><a href="#">Resumo Semanal</a></li><li><a href="#">SAD</a></li></ul>
+              </li>
+              <li><a href="#"><span>💬</span> Pendências</a></li>
+              <li><a href="setores.html" class="ativo"><span>📊</span> Setores</a></li>
+              <li><a href="#"><span>👥</span> Áreas / Func.</a></li>
+            </ul>
+          </nav>
+        </div>
+        <a href="#" class="sair"><span>🚪</span> Sair</a>
+      </aside>
 
-      <nav>
-        <ul>
-          <a href="index.html"><li>home</li></a>
-          <a href="areadofuncionario.html"><li>Área do funcionario</li></a>
-          <a href="pendencias.html"><li>Pendências</li></a>
-          <a href="setores.html"><li>Setores</li></a>
-          <a href="areas/func.html"><li>Áreas/Func</li></a>
-        </ul>
-      </nav>
-    </aside>
-
-    <div class="conteudo">
-      <header>
-        <p><span>🔔</span></p>
-        <p><strong>Óla Gestor(a)</strong></p>
-        <p>RH</p>
-      </header>
-
-      <main>
-        <section class="hero-principal">
-          <h1>Setores</h1>
-          <p class="p">
-            Acompanhe o desempenho dos setores por meio de relat[orios e dados
-            agregados
-          </p>
-
-          <div class="hero-cards">
-            <article class="card1">
-              <p>Melhor setor</p>
-              <h2>RH</h2>
-              <p>Pontuação média</p>
-              <h2>8,2/10</h2>
-            </article>
-
-            <article class="card2">
-              <p>Maior atenção</p>
-              <h2>Operação</h2>
-              <p>Nota da semana</p>
-              <h2>6,1/10</h2>
-            </article>
-
-            <article class="card3">
-              <p>Maior participação</p>
-              <h2>Comercial</h2>
-              <p>Participação</p>
-              <h2>86%</h2>
-            </article>
-
-            <article class="card4">
-              <p>Check-ins totais</p>
-              <h2>1.248</h2>
-              <p>+12% em relação à semana anterior</p>
-            </article>
+      <div class="conteudo">
+        <header class="topo">
+          <div class="topo-esq">
+            <h1>Setores <span class="tag">Visão geral</span></h1>
+            <p>Acompanhe o desempenho dos setores por meio de relatórios e dados agregados.</p>
           </div>
-        </section>
+        </header>
 
-        <section class="tabela-setores">
-          <h2>Desempenho por setor</h2>
+        <main>
+          <p class="titulo-relatorios">RELATÓRIOS</p>
+          <div class="hero-cards">
+            <article class="card"><div class="card-topo"><span>😊</span> Melhor setor <strong>RH</strong></div><p>Pontuação média</p><h3>8,2 <small>/ 10</small></h3><div class="mini-grafico-card graf-verde"></div></article>
+            <article class="card"><div class="card-topo"><span>⚡</span> Mais atenção <strong>Operações</strong></div><p>Nota da semana</p><h3>6,1 <small>/ 10</small></h3><div class="mini-grafico-card graf-laranja"></div></article>
+            <article class="card"><div class="card-topo"><span>👥</span> Maior participação <strong>Comercial</strong></div><p>Participação</p><h3>86%</h3><div class="mini-grafico-card graf-roxo"></div></article>
+            <article class="card"><div class="card-topo"><span>📋</span> Check-ins totais</div><h3>1.248</h3><p class="crescimento">+ 12% em relação à semana anterior</p><div class="mini-grafico-card graf-azul"></div></article>
+          </div>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Setor</th>
-                <th>Pontuação média</th>
-                <th>Evolução média</th>
-                <th>Participação</th>
-                <th>Check-ins</th>
-                <th>Tendência</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr class="linha1">
-                <td>Recursos Humanos</td>
-                <td>8,2 😊</td>
-                <td>4,3 🟢</td>
-                <td>89%</td>
-                <td>249</td>
-                <td>📈</td>
-                <td><button>Ver detalhes</button></td>
-              </tr>
-
-              <tr>
-                <td>Operações</td>
-                <td>6,1 😐</td>
-                <td>4,1 🟠</td>
-                <td>70%</td>
-                <td>188</td>
-                <td>📈</td>
-                <td><button>Ver detalhes</button></td>
-              </tr>
-
-              <tr>
-                <td>Comercial</td>
-                <td>7,8 😊</td>
-                <td>4,8 🟢</td>
-                <td>86%</td>
-                <td>240</td>
-                <td>📈</td>
-                <td><button>Ver detalhes</button></td>
-              </tr>
-
-              <tr>
-                <td>Tecnologia</td>
-                <td>8,0 😊</td>
-                <td>3,8 🟢</td>
-                <td>78%</td>
-                <td>183</td>
-                <td>📈</td>
-                <td><button>Ver detalhes</button></td>
-              </tr>
-
-              <tr>
-                <td>Financeiro</td>
-                <td>7,4 😊</td>
-                <td>4,9 🟠</td>
-                <td>76%</td>
-                <td>169</td>
-                <td>📈</td>
-                <td><button>Ver detalhes</button></td>
-              </tr>
-
-              <tr>
-                <td>Marketing</td>
-                <td>7,1 😐</td>
-                <td>5,3 🟠</td>
-                <td>68%</td>
-                <td>150</td>
-                <td>📈</td>
-                <td><button>Ver detalhes</button></td>
-              </tr>
-
-              <tr>
-                <td>Customer Success</td>
-                <td>8,1 😊</td>
-                <td>4,2 🟢</td>
-                <td>81%</td>
-                <td>113</td>
-                <td>📈</td>
-                <td><button>Ver detalhes</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section class="relatorio">
-          <p>Todos os dados sao anônimos e agregados.</p>
-          <p><span>A privacidade da sua equipe é nossa prioridade.</span></p>
-          
-            <button class="exportar">Exportar relatório</button>
-          
-        </section>
-      </main>
+          <section class="tabela-setores">
+            <h2>Desempenho por setor</h2>
+            <table>
+              <thead><tr><th>Setor</th><th>Pontuação média</th><th>Evolução média</th><th>Participação</th><th>Check-ins</th><th>Tendência</th><th>Ações</th></tr></thead>
+              <tbody>
+                <tr><td><span class="sigla rh">RH</span> Recursos Humanos</td><td>8,2 <span>😊</span></td><td>4,3 <span class="bolinha verde"></span></td><td><div class="barra-container"><div class="barra barra-verde" style="width:89%"></div></div> 89%</td><td>249</td><td><div class="mini-grafico graf-verde"></div></td><td><button>Ver detalhes ></button></td></tr>
+                <tr><td><span class="sigla op">OP</span> Operações</td><td>6,1 <span>😐</span></td><td>4,1 <span class="bolinha laranja"></span></td><td><div class="barra-container"><div class="barra barra-laranja" style="width:70%"></div></div> 70%</td><td>188</td><td><div class="mini-grafico graf-laranja"></div></td><td><button>Ver detalhes ></button></td></tr>
+                <tr><td><span class="sigla co">CO</span> Comercial</td><td>7,8 <span>😊</span></td><td>4,8 <span class="bolinha verde"></span></td><td><div class="barra-container"><div class="barra barra-roxa" style="width:86%"></div></div> 86%</td><td>240</td><td><div class="mini-grafico graf-roxo"></div></td><td><button>Ver detalhes ></button></td></tr>
+                <tr><td><span class="sigla ti">TI</span> Tecnologia</td><td>8,0 <span>😊</span></td><td>3,8 <span class="bolinha verde"></span></td><td><div class="barra-container"><div class="barra barra-azul" style="width:78%"></div></div> 78%</td><td>183</td><td><div class="mini-grafico graf-azul"></div></td><td><button>Ver detalhes ></button></td></tr>
+                <tr><td><span class="sigla fi">FI</span> Financeiro</td><td>7,4 <span>😊</span></td><td>4,9 <span class="bolinha laranja"></span></td><td><div class="barra-container"><div class="barra barra-rosa" style="width:76%"></div></div> 76%</td><td>169</td><td><div class="mini-grafico graf-rosa"></div></td><td><button>Ver detalhes ></button></td></tr>
+                <tr><td><span class="sigla mk">MK</span> Marketing</td><td>7,1 <span>😐</span></td><td>5,3 <span class="bolinha laranja"></span></td><td><div class="barra-container"><div class="barra barra-amarela" style="width:68%"></div></div> 68%</td><td>150</td><td><div class="mini-grafico graf-amarelo"></div></td><td><button>Ver detalhes ></button></td></tr>
+                <tr><td><span class="sigla cs">CS</span> Customer Success</td><td>8,1 <span>😊</span></td><td>4,2 <span class="bolinha verde"></span></td><td><div class="barra-container"><div class="barra barra-verde2" style="width:81%"></div></div> 81%</td><td>113</td><td><div class="mini-grafico graf-verde2"></div></td><td><button>Ver detalhes ></button></td></tr>
+              </tbody>
+            </table>
+          </section>
+        </main>
+      </div>
     </div>
-    <footer></footer>
   </body>
 </html>
