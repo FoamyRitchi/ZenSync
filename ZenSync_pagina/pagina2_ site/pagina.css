@@ -1,0 +1,281 @@
+/* ===================================================
+   ZENSYNC - CSS PREMIUM
+=================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --verde:#89B65A;
+    --verde2:#5E8E3E;
+    --verde3:#315F34;
+
+    --roxo:#A25BE9;
+    --roxo2:#8142D4;
+    --roxo3:#6127AA;
+
+    --fundo:#FFF9F3;
+
+    --texto:#2F2F2F;
+
+    --card:#ffffff;
+
+    --radius:32px;
+
+}
+
+body{
+
+    font-family:'Outfit',sans-serif;
+
+    background:
+    radial-gradient(circle at top left,#F0E5FF 0%,transparent 32%),
+    radial-gradient(circle at bottom right,#E5F6D8 0%,transparent 30%),
+    var(--fundo);
+
+    color:var(--texto);
+
+    min-height:100vh;
+
+    padding:30px;
+
+}
+
+.container{
+
+    max: width 1500px;px;
+
+    margin:auto;
+
+}
+
+/* ==============================
+HEADER
+============================== */
+
+.topo{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:30px;
+
+    padding:24px 45px;
+
+    margin-bottom:28px;
+
+    box-shadow:
+    0 15px 35px rgba(162, 65, 65, 0.08);
+
+}
+
+.logo img{
+
+    width:210px;
+
+    transition:.35s;
+
+}
+
+.logo img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/* BOTÃO */
+
+.btn-entrar{
+
+    width:220px;
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,
+    var(--verde),
+    var(--verde2));
+
+    transition:.30s;
+
+    box-shadow:
+    0 10px 25px rgba(88,137,56,.25);
+
+}
+
+.btn-entrar:hover{
+
+    transform:translateY(-5px);
+
+    background:linear-gradient(135deg,
+    #98C66A,
+    var(--verde3));
+
+}
+
+/* ==============================
+BANNER
+============================== */
+
+.banner{
+
+    position:relative;
+
+    height:570px;
+
+    overflow:hidden;
+
+    border-radius:40px;
+
+    background:url("imagem/imagem.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    box-shadow:
+    0 20px 50px rgba(96,39,170,.15);
+
+}
+
+.banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(90deg,
+    rgba(255,255,255,.82),
+    rgba(255,255,255,.45),
+    transparent);
+
+}
+
+.texto-banner{
+
+    position:absolute;
+
+    z-index:5;
+
+    top:50%;
+
+    left:70px;
+
+    transform:translateY(-50%);
+
+    max-width:620px;
+
+}
+
+.texto-banner h1{
+
+    font-size:72px;
+
+    font-weight:800;
+
+    line-height:1.05;
+
+    color:var(--verde3);
+
+    letter-spacing:-2px;
+
+}
+
+.texto-banner span{
+
+    color:var(--roxo2);
+
+}
+
+.texto-banner p{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    line-height:1.6;
+
+    color:#555;
+
+}
+
+/* ==============================
+BOTÃO ROXO
+============================== */
+
+.btn-formulario{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:260px;
+
+    height:65px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+    135deg,
+    var(--roxo),
+    var(--roxo2),
+    var(--roxo3));
+
+    transition:.30s;
+
+    box-shadow:
+    0 15px 30px rgba(97,39,170,.25);
+
+}
+
+.btn-formulario:hover{
+
+    transform:translateY(-5px);
+
+}
+
