@@ -1,0 +1,1178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    color: #303033;
+
+    background:
+        radial-gradient(
+            circle at 45% 8%,
+            #fff0d2 0%,
+            rgba(255, 240, 210, .45) 18%,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #eee6f5 0%,
+            #f8f3ef 48%,
+            #eee8f5 100%
+        );
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 120px;
+    min-height: 100vh;
+
+    flex-shrink: 0;
+
+    padding: 18px 10px;
+
+    background: rgba(255, 255, 255, .72);
+
+    border-right: 1px solid #e5dfe8;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 34px;
+
+    margin-bottom: 24px;
+}
+
+.logo h2 {
+    font-size: 17px;
+
+    color: #262329;
+
+    font-weight: 700;
+}
+
+
+/* MENU */
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.sidebar a {
+    min-height: 39px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 9px 10px;
+
+    border-radius: 22px;
+
+    color: #66616a;
+
+    text-decoration: none;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    transition: .25s ease;
+}
+
+.sidebar a i {
+    width: 15px;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+.sidebar a:hover {
+    background: #f1edf4;
+
+    color: #694c80;
+}
+
+.sidebar a.ativo {
+    color: #fff;
+
+    background: linear-gradient(
+        135deg,
+        #4db875,
+        #39a966
+    );
+
+    box-shadow:
+        0 7px 15px rgba(63, 173, 105, .22);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 100vh;
+
+    padding: 0 12px 12px;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 12px;
+
+    margin-bottom: 10px;
+
+    border-radius: 0 0 18px 18px;
+
+    background: linear-gradient(
+        90deg,
+        #f3e7f4 0%,
+        #f8efe9 50%,
+        #eee6f5 100%
+    );
+
+    border: 1px solid rgba(220, 210, 220, .65);
+
+    box-shadow:
+        0 2px 8px rgba(70, 55, 70, .04);
+}
+
+
+/* =========================================================
+   SUGESTÕES E IDEIAS
+========================================================= */
+
+.topbar__sugestoes {
+    width: auto;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 14px;
+
+    text-decoration: none;
+
+    color: #77717a;
+
+    font-size: 9px;
+
+    transition: .2s ease;
+}
+
+.topbar__sugestoes i {
+    font-size: 10px;
+}
+
+
+
+
+/* =========================================================
+   RELATÓRIOS
+========================================================= */
+
+.topbar__relatorios {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    color: #59545c;
+
+    font-size: 9px;
+
+    transition: .2s ease;
+}
+
+.topbar__relatorios i {
+    font-size: 11px;
+}
+
+.topbar__relatorios:hover {
+    background: rgba(255, 255, 255, .55);
+
+    color: #29262d;
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.topbar__avatar {
+    width: 32px;
+    height: 32px;
+
+    margin-left: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #d8b9ed;
+
+    color: #513d61;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.conteudo {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 290px;
+
+    gap: 15px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   ÁREA PRINCIPAL
+========================================================= */
+
+.principal {
+    min-width: 0;
+
+    min-height: calc(100vh - 62px);
+
+    padding: 18px 12px 12px;
+
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at 55% 0%,
+            rgba(255, 221, 173, .82),
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            #f7e5d1 0%,
+            #faf6f2 36%,
+            #f9f7f5 100%
+        );
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.titulo {
+    padding: 0 8px;
+
+    margin-bottom: 15px;
+}
+
+.titulo h1 {
+    color: #28262a;
+
+    font-size: 17px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+.titulo p {
+    margin-top: 5px;
+
+    color: #777179;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   FILTROS
+========================================================= */
+
+.filtros {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.15fr;
+
+    gap: 8px;
+
+    margin-bottom: 12px;
+}
+
+.filtros input,
+.filtros select {
+    width: 100%;
+
+    height: 34px;
+
+    padding: 0 11px;
+
+    border: 1px solid #e4deda;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, .9);
+
+    color: #626067;
+
+    font-size: 8px;
+}
+
+.filtros input::placeholder {
+    color: #888188;
+}
+
+.filtros input:focus,
+.filtros select:focus {
+    border-color: #cdb7d6;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+}
+
+.card {
+    position: relative;
+
+    min-height: 75px;
+
+    padding: 10px 13px;
+
+    border: 1px solid #e7e1dd;
+
+    border-radius: 11px;
+
+    background: rgba(255, 255, 255, .92);
+
+    box-shadow:
+        0 5px 15px rgba(90, 72, 60, .06);
+}
+
+.card i {
+    position: absolute;
+
+    top: 11px;
+    left: 13px;
+
+    font-size: 13px;
+
+    color: #46ae72;
+}
+
+.card:nth-child(2) i {
+    color: #43ae73;
+}
+
+.card:nth-child(3) i {
+    color: #f3a51b;
+}
+
+.card:nth-child(4) i {
+    color: #8d59ae;
+}
+
+.card h3 {
+    margin-top: 25px;
+
+    color: #333237;
+
+    font-size: 17px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+.card p {
+    margin-top: 5px;
+
+    color: #777177;
+
+    font-size: 7px;
+}
+
+
+/* =========================================================
+   TABELA
+========================================================= */
+
+.tabela {
+    padding: 13px;
+
+    border: 1px solid #e6e0dc;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, .95);
+
+    box-shadow:
+        0 5px 15px rgba(70, 60, 55, .05);
+
+    overflow: hidden;
+}
+
+.tabela h3 {
+    margin-bottom: 8px;
+
+    color: #353238;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+thead th {
+    padding: 7px 5px;
+
+    text-align: left;
+
+    color: #777179;
+
+    border-bottom: 1px solid #ece7e4;
+
+    font-size: 6.5px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+tbody td {
+    height: 34px;
+
+    padding: 6px 5px;
+
+    color: #555159;
+
+    border-bottom: 1px solid #f0edeb;
+
+    font-size: 7px;
+
+    vertical-align: middle;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #fbf9fb;
+}
+
+
+/* COLABORADOR */
+
+.usuario {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #37343a;
+
+    font-weight: 600;
+}
+
+.usuario img {
+    width: 23px;
+    height: 23px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 3px 6px;
+
+    border-radius: 5px;
+
+    font-size: 5.5px;
+
+    font-weight: 600;
+}
+
+.tag.marketing {
+    color: #85539f;
+
+    background: #eee0f6;
+}
+
+.tag.tecnologia {
+    color: #4b84a9;
+
+    background: #deedf7;
+}
+
+.tag.financeiro {
+    color: #499266;
+
+    background: #ddf1e5;
+}
+
+
+/* =========================================================
+   BOTÃO TABELA
+========================================================= */
+
+.btn-tabela {
+    display: block;
+
+    margin: 8px auto 0;
+
+    padding: 5px 22px;
+
+    border: 1px solid #cce4d3;
+
+    border-radius: 5px;
+
+    background: #fff;
+
+    color: #4a9967;
+
+    font-size: 6.5px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.btn-tabela:hover {
+    background: #edf8f1;
+}
+
+
+/* =========================================================
+   PRIVACIDADE
+========================================================= */
+
+.privacidade {
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 10px;
+
+    padding: 8px 12px;
+
+    border: 1px solid #e5dfdc;
+
+    border-radius: 11px;
+
+    background: rgba(255, 255, 255, .82);
+}
+
+.privacidade > i {
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #def2e5;
+
+    color: #42a16a;
+
+    font-size: 12px;
+}
+
+.privacidade strong {
+    display: block;
+
+    color: #454147;
+
+    font-size: 7px;
+}
+
+.privacidade p {
+    margin-top: 2px;
+
+    color: #888188;
+
+    font-size: 6px;
+}
+
+
+/* =========================================================
+   PAINEL DIREITO
+========================================================= */
+
+.painel {
+    min-width: 0;
+
+    min-height: calc(100vh - 62px);
+
+    padding: 14px;
+
+    border: 1px solid #e5dfe4;
+
+    border-radius: 19px;
+
+    background: rgba(255, 255, 255, .94);
+
+    box-shadow:
+        0 7px 20px rgba(70, 58, 68, .07);
+}
+
+
+/* =========================================================
+   PERFIL
+========================================================= */
+
+.perfil {
+    position: relative;
+
+    min-height: 64px;
+
+    padding-left: 55px;
+
+    text-align: left;
+}
+
+.perfil img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 44px;
+    height: 44px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.perfil h3 {
+    padding-top: 4px;
+
+    color: #353238;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.perfil p {
+    margin-top: 4px;
+
+    color: #777078;
+
+    font-size: 6.5px;
+}
+
+
+/* =========================================================
+   ABAS
+========================================================= */
+
+.tabs {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    margin: 0 -3px 12px;
+
+    border-bottom: 1px solid #ebe6e9;
+}
+
+.tabs span {
+    position: relative;
+
+    padding: 7px 2px;
+
+    text-align: center;
+
+    color: #77717a;
+
+    font-size: 6px;
+
+    cursor: pointer;
+}
+
+.tabs span.ativo {
+    color: #419968;
+
+    font-weight: 700;
+}
+
+.tabs span.ativo::after {
+    content: "";
+
+    position: absolute;
+
+    left: 18%;
+    right: 18%;
+    bottom: -1px;
+
+    height: 2px;
+
+    border-radius: 2px;
+
+    background: #4caf72;
+}
+
+
+/* =========================================================
+   MÉTRICAS
+========================================================= */
+
+.metricas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 5px;
+}
+
+.mini-card {
+    min-height: 55px;
+
+    padding: 8px;
+
+    border: 1px solid #ebe6e9;
+
+    border-radius: 8px;
+
+    background: #fbfafb;
+}
+
+.mini-card h4 {
+    color: #77717a;
+
+    font-size: 5.5px;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+}
+
+.mini-card span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #343136;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GRÁFICO
+========================================================= */
+
+.grafico {
+    position: relative;
+
+    height: 128px;
+
+    margin-top: 10px;
+
+    padding: 10px;
+
+    border: 1px solid #ebe6e9;
+
+    border-radius: 9px;
+
+    background: #fff;
+}
+
+.grafico h4 {
+    color: #555158;
+
+    font-size: 7px;
+
+    font-weight: 700;
+}
+
+
+/* Linhas do gráfico */
+
+.grafico::before {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+
+    top: 50px;
+
+    height: 1px;
+
+    background: #eee9ec;
+
+    box-shadow:
+        0 22px 0 #eee9ec,
+        0 44px 0 #eee9ec;
+}
+
+.grafico::after {
+    content: "Dez     Jan     Fev     Mar     Abr     Mai";
+
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+
+    bottom: 7px;
+
+    text-align: center;
+
+    color: #99939b;
+
+    font-size: 5px;
+
+    word-spacing: 5px;
+}
+
+
+/* =========================================================
+   FATORES
+========================================================= */
+
+.fatores {
+    margin-top: 9px;
+
+    padding: 9px;
+
+    border: 1px solid #ebe6e9;
+
+    border-radius: 9px;
+
+    background: #fff;
+}
+
+.fatores h4 {
+    margin-bottom: 7px;
+
+    color: #555158;
+
+    font-size: 7px;
+}
+
+.fatores span {
+    display: block;
+
+    width: max-content;
+
+    margin-bottom: 4px;
+
+    padding: 3px 5px;
+
+    border-radius: 4px;
+
+    color: #4a9566;
+
+    background: #e9f6ed;
+
+    font-size: 5.5px;
+}
+
+.fatores span:nth-child(3) {
+    color: #d17c38;
+
+    background: #fff0e2;
+}
+
+.fatores span:nth-child(4) {
+    color: #8656a2;
+
+    background: #f0e7f7;
+}
+
+
+/* =========================================================
+   RECOMENDAÇÃO
+========================================================= */
+
+.recomendacoes {
+    position: relative;
+
+    min-height: 63px;
+
+    margin-top: 9px;
+
+    padding: 10px;
+
+    border: 1px solid #dcebe0;
+
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #eef8f1,
+        #f8faf8
+    );
+}
+
+.recomendacoes h4 {
+    color: #489769;
+
+    font-size: 7px;
+}
+
+.recomendacoes p {
+    max-width: 150px;
+
+    margin-top: 5px;
+
+    color: #717672;
+
+    font-size: 6px;
+
+    line-height: 1.4;
+}
+
+.recomendacoes button {
+    position: absolute;
+
+    right: 8px;
+    bottom: 8px;
+
+    padding: 4px 8px;
+
+    border: 1px solid #cde4d4;
+
+    border-radius: 5px;
+
+    background: #fff;
+
+    color: #4a9967;
+
+    font-size: 5.5px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TELAS MENORES
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .conteudo {
+        grid-template-columns: minmax(0, 1fr) 270px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filtros {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 10px;
+
+        border-right: none;
+        border-bottom: 1px solid #e5dfe8;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+
+        justify-content: center;
+
+        overflow-x: auto;
+    }
+
+    .sidebar a {
+        white-space: nowrap;
+    }
+
+    .container {
+        min-height: auto;
+
+        padding: 10px;
+    }
+
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .principal,
+    .painel {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .topbar {
+        height: auto;
+
+        flex-wrap: wrap;
+
+        padding: 10px 0;
+    }
+
+    .topbar input {
+        width: 100%;
+        max-width: none;
+    }
+
+    .btn-relatorio {
+        margin-left: auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .principal {
+        padding: 14px 8px;
+    }
+
+    .tabela {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 700px;
+    }
+}
+
+body {
+    zoom: 1.5;
+}
+
+.container {
+    padding: 10px;
+}
+
+.topbar {
+    height: 50px;
+}
+
+.conteudo {
+    gap: 8px;
+}

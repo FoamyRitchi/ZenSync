@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenSync - Área do Funcionário</title>
+
+    <link rel="stylesheet" href="area_funcionario.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>ZenSync</h2>
+        </div>
+
+        <nav>
+
+            <a href="#">
+                <i class="fa-regular fa-clipboard"></i>
+                Pendências
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-chart-column"></i>
+                Resumo Semanal
+            </a>
+
+            <a href="#">
+                <i class="fa-regular fa-circle-question"></i>
+                FAQ
+            </a>
+
+            <a href="#">
+                <i class="fa-regular fa-building"></i>
+                Setores
+            </a>
+
+            <a href="#" class="ativo">
+                <i class="fa-regular fa-user"></i>
+                Área / Func
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTAINER -->
+    <main class="container">
+
+        <!-- TOPO -->
+        <header class="topbar">
+
+            <a href="sugestoes_ideias.html" class="topbar__sugestoes">
+                <i class="fa-regular fa-lightbulb"></i>
+                <span>Sugestões e ideias</span>
+            </a>
+
+            <a href="relatorios.html" class="topbar__relatorios">
+                <i class="fa-regular fa-file-lines"></i>
+                <span>RELATÓRIOS</span>
+            </a>
+
+            <div class="topbar__avatar">
+                J
+            </div>
+
+        </header>
+
+        <!-- CONTEÚDO -->
+        <section class="conteudo">
+
+            <!-- ESQUERDA -->
+            <section class="principal">
+
+                <div class="titulo">
+
+                    <div>
+                        <h1>Área do Funcionário</h1>
+                        <p>
+                            Acompanhe o bem-estar e evolução dos colaboradores.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- FILTROS -->
+                <div class="filtros">
+
+                    <input type="text" placeholder="Buscar colaborador">
+
+                    <select>
+                        <option>Todos os setores</option>
+                    </select>
+
+                    <select>
+                        <option>Status: Ativos</option>
+                    </select>
+
+                    <input type="date">
+
+                </div>
+
+                <!-- CARDS -->
+                <div class="cards">
+
+                    <div class="card">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>248</h3>
+                        <p>Colaboradores ativos</p>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <h3>7,8</h3>
+                        <p>Bem-estar médio</p>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <h3>12</h3>
+                        <p>Em atenção</p>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <h3>3.458</h3>
+                        <p>Check-ins realizados</p>
+                    </div>
+
+                </div>
+
+                <!-- TABELA -->
+                <section class="tabela">
+
+                    <h3>Colaboradores</h3>
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Colaborador</th>
+                                <th>Setor</th>
+                                <th>Cargo</th>
+                                <th>Bem-estar</th>
+                                <th>Estresse</th>
+                                <th>Participação</th>
+                                <th>Último Check-in</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td class="usuario">
+                                    <img src="https://i.pravatar.cc/40?img=5">
+                                    Ana Souza
+                                </td>
+
+                                <td>
+                                    <span class="tag marketing">
+                                        Marketing
+                                    </span>
+                                </td>
+
+                                <td>Analista de Marketing</td>
+                                <td>8,5</td>
+                                <td>3,2</td>
+                                <td>92%</td>
+                                <td>Hoje</td>
+                            </tr>
+
+                            <tr>
+                                <td class="usuario">
+                                    <img src="https://i.pravatar.cc/40?img=12">
+                                    Lucas Lima
+                                </td>
+
+                                <td>
+                                    <span class="tag tecnologia">
+                                        Tecnologia
+                                    </span>
+                                </td>
+
+                                <td>Desenvolvedor Jr</td>
+                                <td>6,1</td>
+                                <td>6,5</td>
+                                <td>68%</td>
+                                <td>7 dias atrás</td>
+                            </tr>
+
+                            <tr>
+                                <td class="usuario">
+                                    <img src="https://i.pravatar.cc/40?img=22">
+                                    João Silva
+                                </td>
+
+                                <td>
+                                    <span class="tag financeiro">
+                                        Financeiro
+                                    </span>
+                                </td>
+
+                                <td>Assistente Financeiro</td>
+                                <td>7,8</td>
+                                <td>4,0</td>
+                                <td>88%</td>
+                                <td>Ontem</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                    <button class="btn-tabela">
+                        Ver todos os colaboradores
+                    </button>
+
+                </section>
+
+                <!-- PRIVACIDADE -->
+                <div class="privacidade">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+                        <strong>
+                            Todos os dados são anônimos e protegidos
+                        </strong>
+
+                        <p>
+                            A privacidade da sua equipe é nossa prioridade.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- PAINEL DIREITO -->
+            <aside class="painel">
+
+                <div class="perfil">
+
+                    <img src="https://i.pravatar.cc/150?img=5">
+
+                    <h3>Ana Souza</h3>
+
+                    <p>
+                        Analista de Marketing
+                    </p>
+
+                </div>
+
+                <!-- ABAS -->
+                <div class="tabs">
+
+                    <span class="ativo">
+                        Visão geral
+                    </span>
+
+                    <span>
+                        Histórico
+                    </span>
+
+                    <span>
+                        Notas
+                    </span>
+
+                    <span>
+                        Documentos
+                    </span>
+
+                </div>
+
+                <!-- MÉTRICAS -->
+                <div class="metricas">
+
+                    <div class="mini-card">
+                        <h4>Índice de Bem-estar</h4>
+                        <span>8,5 / 10</span>
+                    </div>
+
+                    <div class="mini-card">
+                        <h4>Nível de Estresse</h4>
+                        <span>3,2 / 10</span>
+                    </div>
+
+                    <div class="mini-card">
+                        <h4>Participação</h4>
+                        <span>92%</span>
+                    </div>
+
+                </div>
+
+                <!-- GRÁFICO -->
+                <div class="grafico">
+
+                    <h4>
+                        Evolução emocional
+                    </h4>
+
+                </div>
+
+                <!-- FATORES -->
+                <div class="fatores">
+
+                    <h4>
+                        Fatores mais relatados
+                    </h4>
+
+                    <span>Equilíbrio trabalho-vida</span>
+                    <span>Sobrecarga de trabalho</span>
+                    <span>Desenvolvimento profissional</span>
+
+                </div>
+
+                <!-- RECOMENDAÇÕES -->
+                <div class="recomendacoes">
+
+                    <h4>
+                        Recomendação
+                    </h4>
+
+                    <p>
+                        Manter acompanhamento do progresso e reforçar práticas de autocuidado.
+                    </p>
+
+                    <button>
+                        Ver sugestões
+                    </button>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
