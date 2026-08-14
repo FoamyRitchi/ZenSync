@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZenSync | Relatório</title>
+
+    <link rel="stylesheet" href="relatorio.css">
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div class="top-left">
+
+                <button class="logout-button" onclick="window.location.href='../AreaEmp.html'">
+                    ← Sair
+                </button>
+
+                <div class="date-area">
+
+                    <strong id="dataAtual">
+                        Carregando...
+                    </strong>
+
+                    <span id="diaSemana">
+                        Carregando...
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-area">
+
+                <button class="notification-button">
+                    ♢
+                </button>
+
+                <button class="profile-button">
+
+                    <span class="profile-avatar">
+                        L
+                    </span>
+
+                    <span class="profile-info">
+
+                        <strong>
+                            Lucas
+                        </strong>
+
+                        <small>
+                            RH
+                        </small>
+
+                    </span>
+
+                    <span class="profile-arrow">
+                        ⌄
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <section class="content">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        ZENSYNC
+                    </span>
+
+                    <h1>
+                        Relatório de bem-estar
+                    </h1>
+
+                    <p>
+                        Acompanhe os principais indicadores de bem-estar,
+                        participação e clima organizacional da empresa.
+                    </p>
+
+                </div>
+
+
+                <div class="period-selector">
+
+                    <span>
+                        Período
+                    </span>
+
+                    <select id="periodo">
+
+                        <option>
+                            Últimos 30 dias
+                        </option>
+
+                        <option>
+                            Últimos 60 dias
+                        </option>
+
+                        <option>
+                            Últimos 90 dias
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <section class="overview-cards">
+
+
+                <div class="overview-card">
+
+                    <div class="card-top">
+
+                        <span>
+                            Humor médio
+                        </span>
+
+                        <span class="card-icon purple">
+                            ☺
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        7,8<span>/10</span>
+                    </strong>
+
+                    <small>
+                        Bom resultado geral
+                    </small>
+
+                </div>
+
+
+
+                <div class="overview-card">
+
+                    <div class="card-top">
+
+                        <span>
+                            Estresse médio
+                        </span>
+
+                        <span class="card-icon green">
+                            ◌
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        5,4<span>/10</span>
+                    </strong>
+
+                    <small>
+                        Nível moderado
+                    </small>
+
+                </div>
+
+
+
+                <div class="overview-card">
+
+                    <div class="card-top">
+
+                        <span>
+                            Participação
+                        </span>
+
+                        <span class="card-icon purple">
+                            ↗
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        72<span>%</span>
+                    </strong>
+
+                    <small>
+                        Dos colaboradores
+                    </small>
+
+                </div>
+
+
+
+                <div class="overview-card">
+
+                    <div class="card-top">
+
+                        <span>
+                            Check-ins realizados
+                        </span>
+
+                        <span class="card-icon green">
+                            ✓
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        1.248
+                    </strong>
+
+                    <small>
+                        No período selecionado
+                    </small>
+
+                </div>
+
+
+            </section>
+
+
+
+            <section class="report-grid">
+
+
+                <div class="report-card department-chart">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                Comparação por departamento
+                            </h2>
+
+                            <p>
+                                Humor e estresse dos setores da empresa.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart">
+
+
+                        <div class="chart-row">
+
+                            <div class="department-name">
+                                Marketing
+                            </div>
+
+                            <div class="bars">
+
+                                <div class="bar-group">
+
+                                    <span class="bar-label">
+                                        8,2
+                                    </span>
+
+                                    <div
+                                        class="bar mood"
+                                        style="width:82%;">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <span class="bar-label">
+                                        4,1
+                                    </span>
+
+                                    <div
+                                        class="bar stress"
+                                        style="width:41%;">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="chart-row">
+
+                            <div class="department-name">
+                                Vendas
+                            </div>
+
+                            <div class="bars">
+
+                                <div class="bar-group">
+
+                                    <span class="bar-label">
+                                        7,6
+                                    </span>
+
+                                    <div
+                                        class="bar mood"
+                                        style="width:76%;">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <span class="bar-label">
+                                        5,2
+                                    </span>
+
+                                    <div
+                                        class="bar stress"
+                                        style="width:52%;">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="chart-row">
+
+                            <div class="department-name">
+                                Operações
+                            </div>
+
+                            <div class="bars">
+
+                                <div class="bar-group">
+
+                                    <span class="bar-label">
+                                        7,1
+                                    </span>
+
+                                    <div
+                                        class="bar mood"
+                                        style="width:71%;">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <span class="bar-label">
+                                        5,6
+                                    </span>
+
+                                    <div
+                                        class="bar stress"
+                                        style="width:56%;">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="chart-row">
+
+                            <div class="department-name">
+                                Tecnologia
+                            </div>
+
+                            <div class="bars">
+
+                                <div class="bar-group">
+
+                                    <span class="bar-label">
+                                        6,4
+                                    </span>
+
+                                    <div
+                                        class="bar mood"
+                                        style="width:64%;">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <span class="bar-label">
+                                        6,3
+                                    </span>
+
+                                    <div
+                                        class="bar stress"
+                                        style="width:63%;">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="chart-row">
+
+                            <div class="department-name">
+                                Financeiro
+                            </div>
+
+                            <div class="bars">
+
+                                <div class="bar-group">
+
+                                    <span class="bar-label">
+                                        7,0
+                                    </span>
+
+                                    <div
+                                        class="bar mood"
+                                        style="width:70%;">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <span class="bar-label">
+                                        4,7
+                                    </span>
+
+                                    <div
+                                        class="bar stress"
+                                        style="width:47%;">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="chart-legend">
+
+                        <span>
+
+                            <i class="legend-dot mood"></i>
+
+                            Humor
+
+                        </span>
+
+
+                        <span>
+
+                            <i class="legend-dot stress"></i>
+
+                            Estresse
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="report-card participation-card">
+
+                    <div class="section-header">
+
+                        <h2>
+                            Participação
+                        </h2>
+
+                        <p>
+                            Check-ins realizados por departamento.
+                        </p>
+
+                    </div>
+
+
+                    <div class="participation-list">
+
+
+                        <div class="participation-item">
+
+                            <div class="participation-info">
+
+                                <span>
+                                    Marketing
+                                </span>
+
+                                <strong>
+                                    86%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span style="width:86%;"></span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="participation-item">
+
+                            <div class="participation-info">
+
+                                <span>
+                                    Vendas
+                                </span>
+
+                                <strong>
+                                    78%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span style="width:78%;"></span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="participation-item">
+
+                            <div class="participation-info">
+
+                                <span>
+                                    Operações
+                                </span>
+
+                                <strong>
+                                    70%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span style="width:70%;"></span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="participation-item">
+
+                            <div class="participation-info">
+
+                                <span>
+                                    Tecnologia
+                                </span>
+
+                                <strong>
+                                    68%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span style="width:68%;"></span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="participation-item">
+
+                            <div class="participation-info">
+
+                                <span>
+                                    Financeiro
+                                </span>
+
+                                <strong>
+                                    75%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <span style="width:75%;"></span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <section class="attention-section">
+
+                <div class="section-title">
+
+                    <h2>
+                        Pontos de atenção
+                    </h2>
+
+                    <p>
+                        Indicadores que merecem acompanhamento.
+                    </p>
+
+                </div>
+
+
+                <div class="attention-grid">
+
+
+                    <div class="attention-card red">
+
+                        <div class="attention-icon">
+                            !
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Tecnologia
+                            </span>
+
+                            <h3>
+                                Maior nível de estresse
+                            </h3>
+
+                            <p>
+                                O setor apresenta média de
+                                <strong>6,3/10</strong>.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="attention-card yellow">
+
+                        <div class="attention-icon">
+                            !
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Operações
+                            </span>
+
+                            <h3>
+                                Participação abaixo da média
+                            </h3>
+
+                            <p>
+                                Participação atual de
+                                <strong>70%</strong>.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="attention-card green">
+
+                        <div class="attention-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Marketing
+                            </span>
+
+                            <h3>
+                                Melhor resultado geral
+                            </h3>
+
+                            <p>
+                                Humor de <strong>8,2/10</strong> e
+                                participação de <strong>86%</strong>.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <section class="extra-info">
+
+                <div class="extra-card">
+
+                    <span>
+                        Indicador geral
+                    </span>
+
+                    <strong>
+                        7,4/10
+                    </strong>
+
+                    <p>
+                        Índice geral de bem-estar dos colaboradores.
+                    </p>
+
+                </div>
+
+
+                <div class="extra-card">
+
+                    <span>
+                        Departamentos analisados
+                    </span>
+
+                    <strong>
+                        5
+                    </strong>
+
+                    <p>
+                        Setores incluídos no relatório atual.
+                    </p>
+
+                </div>
+
+
+                <div class="extra-card">
+
+                    <span>
+                        Colaboradores ativos
+                    </span>
+
+                    <strong>
+                        1.732
+                    </strong>
+
+                    <p>
+                        Base considerada para os indicadores.
+                    </p>
+
+                </div>
+
+
+                <div class="extra-card">
+
+                    <span>
+                        Última atualização
+                    </span>
+
+                    <strong id="horaAtual">
+                        --:--
+                    </strong>
+
+                    <p>
+                        Horário da geração dos dados.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <div class="report-footer">
+
+                <button
+                    class="export-button"
+                    id="exportarRelatorio">
+
+                    Exportar relatório
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script>
+
+    function atualizarData() {
+
+        const agora = new Date();
+
+        const opcoesData = {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric"
+        };
+
+        const opcoesDia = {
+            weekday: "long"
+        };
+
+        const data = agora.toLocaleDateString(
+            "pt-BR",
+            opcoesData
+        );
+
+        let dia = agora.toLocaleDateString(
+            "pt-BR",
+            opcoesDia
+        );
+
+        dia = dia.charAt(0).toUpperCase() + dia.slice(1);
+
+        const hora = agora.toLocaleTimeString(
+            "pt-BR",
+            {
+                hour: "2-digit",
+                minute: "2-digit"
+            }
+        );
+
+        document.getElementById("dataAtual").textContent = data;
+
+        document.getElementById("diaSemana").textContent = dia;
+
+        document.getElementById("horaAtual").textContent = hora;
+
+    }
+
+    atualizarData();
+
+</script>
+
+
+<script src="relatorio.js"></script>
+
+</body>
+
+</html>

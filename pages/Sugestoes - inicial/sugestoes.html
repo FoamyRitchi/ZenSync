@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZenSync - Sugestões e Ideias</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="sugestoes.css">
+    <script src="sugestoes.js" defer></script>
+</head>
+
+<body>
+
+    <div class="pagina">
+
+        <aside class="sidebar">
+
+           <div class="logo">
+
+    <a href="/imagens.sugestão/logoaolado,png.png" target="_blank">
+    <img src="./imagens.sugestão/logoaolado,png.png" alt="Logo ZenSync">
+</a>
+
+</div>
+            <nav class="menu">
+
+                <a href="index.html" class="menu-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+
+                <a href="funcionario.html" class="menu-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Área do Funcionário</span>
+                </a>
+
+                <a href="sugestoes.html" class="menu-item ativo">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <span>Sugestões e Ideias</span>
+                </a>
+
+                <a href="empresa.html" class="menu-item">
+                    <i class="fa-solid fa-building"></i>
+                    <span>Área da Empresa</span>
+                </a>
+
+                <a href="biblioteca.html" class="menu-item">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Biblioteca</span>
+                </a>
+
+            </nav>
+
+            <a href="../Pagina - inicial/pagina.html" class="sair" id="botaoSair">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    <span>Sair</span>
+</a>
+
+        </aside>
+
+        <main class="conteudo">
+
+            <header class="topo">
+
+                <button class="notificacao" type="button">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+                <div class="avatar">
+                    J
+                </div>
+
+                <span class="usuario">
+                    Olá, Mariana!
+                </span>
+
+                <i class="fa-solid fa-chevron-down seta"></i>
+
+            </header>
+
+            <div class="area">
+
+                <section class="cabecalho">
+
+                    <div class="cabecalho-texto">
+
+                        <h1>
+                            Sugestões e Ideias
+                        </h1>
+
+                        <p>
+                            Sua opinião ajuda a construir um ambiente de trabalho melhor para todos.
+                        </p>
+
+                    </div>
+
+                    <div class="ilustracao">
+
+                        <div class="aviao">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </div>
+
+                        <div class="pontilhado"></div>
+
+                        <div class="lampada">
+                            <i class="fa-regular fa-lightbulb"></i>
+                        </div>
+
+                        <div class="folha folha1"></div>
+
+                        <div class="folha folha2"></div>
+
+                        <div class="folha folha3"></div>
+
+                        <div class="balao">
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="card">
+
+                    <h2>
+                        1. Escolha o tipo do seu envio
+                    </h2>
+
+                    <p class="descricao">
+                        Selecione a opção que melhor descreve a sua mensagem.
+                    </p>
+
+                    <div class="opcoes">
+
+                        <div class="opcao selecionada" data-tipo="Sugestão">
+
+                            <div class="check">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="icone verde">
+                                <i class="fa-regular fa-lightbulb"></i>
+                            </div>
+
+                            <h3>
+                                Sugestão
+                            </h3>
+
+                            <p>
+                                Tem uma ideia para melhorar algo?
+                            </p>
+
+                        </div>
+
+                        <div class="opcao" data-tipo="Crítica Construtiva">
+
+                            <div class="check">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="icone amarelo">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+
+                            <h3>
+                                Crítica Construtiva
+                            </h3>
+
+                            <p>
+                                Identificou algo que podemos melhorar?
+                            </p>
+
+                        </div>
+
+                        <div class="opcao" data-tipo="Ideia de Melhoria">
+
+                            <div class="check">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="icone roxo">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <h3>
+                                Ideia de Melhoria
+                            </h3>
+
+                            <p>
+                                Pense em algo inovador para nossa empresa.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="card mensagem-card">
+
+                    <h2>
+                        2. Conte sua mensagem
+                    </h2>
+
+                    <p class="descricao">
+                        Seja claro e objetivo. Quanto mais detalhes, melhor!
+                    </p>
+
+                    <div class="textarea-container">
+
+                        <textarea
+                            id="mensagem"
+                            maxlength="1000"
+                            placeholder="Escreva sua sugestão, crítica ou ideia aqui..."
+                        ></textarea>
+
+                        <span id="contador">
+                            0/1000 caracteres
+                        </span>
+
+                    </div>
+
+                    <div class="acoes">
+
+                        <div class="anonimo">
+
+                            <i class="fa-solid fa-user-secret"></i>
+
+                            <div class="anonimo-texto">
+
+                                <strong>
+                                    Enviar anonimamente
+                                </strong>
+
+                                <small>
+                                    Sua identidade não será revelada.
+                                </small>
+
+                            </div>
+
+                            <button
+                                class="toggle ativo"
+                                id="toggleAnonimo"
+                                type="button"
+                            >
+                                <span></span>
+                            </button>
+
+                        </div>
+
+                        <button
+                            class="botao-enviar"
+                            id="botaoEnviar"
+                            type="button"
+                        >
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            Enviar mensagem
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+                <section class="card dicas">
+
+                    <div class="titulo-dicas">
+
+                        <i class="fa-regular fa-lightbulb"></i>
+
+                        <h2>
+                            Dicas para um bom feedback
+                        </h2>
+
+                    </div>
+
+                    <div class="dicas-container">
+
+                        <div class="dica">
+
+                            <div class="dica-icone verde-fundo">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Seja específico
+                                </h3>
+
+                                <p>
+                                    Deixe claro o que deve ser melhorado.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="dica">
+
+                            <div class="dica-icone roxo-fundo">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Respeite sempre
+                                </h3>
+
+                                <p>
+                                    Feedbacks respeitosos constroem pontes.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="dica">
+
+                            <div class="dica-icone verde-fundo">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Pense em soluções
+                                </h3>
+
+                                <p>
+                                    Sugira melhorias e possíveis soluções.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="card mensagens">
+
+                    <div class="mensagens-topo">
+
+                        <h2>
+                            Acompanhe suas mensagens
+                        </h2>
+
+                        <button
+                            id="verTodas"
+                            type="button"
+                        >
+                            Ver todas →
+                        </button>
+
+                    </div>
+
+                    <div class="mensagem-item">
+
+                        <div class="item-icone verde-fundo">
+                            <i class="fa-regular fa-lightbulb"></i>
+                        </div>
+
+                        <div class="item-info">
+
+                            <div class="item-titulo">
+
+                                <strong>
+                                    Mais flexibilidade nos horários
+                                </strong>
+
+                                <span class="categoria verde-status">
+                                    Sugestão
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Seria ótimo termos mais flexibilidade...
+                            </p>
+
+                        </div>
+
+                        <span class="status">
+                            Em análise
+                        </span>
+
+                        <span class="data">
+                            08/08/2026
+                        </span>
+
+                        <i class="fa-solid fa-chevron-right seta-item"></i>
+
+                    </div>
+
+                    <div class="mensagem-item">
+
+                        <div class="item-icone amarelo-fundo">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+
+                        <div class="item-info">
+
+                            <div class="item-titulo">
+
+                                <strong>
+                                    Comunicação entre setores
+                                </strong>
+
+                                <span class="categoria amarelo-status">
+                                    Crítica
+                                </span>
+
+                            </div>
+
+                            <p>
+                                A comunicação entre setores poderia ser melhorada...
+                            </p>
+
+                        </div>
+
+                        <span class="status">
+                            Em análise
+                        </span>
+
+                        <span class="data">
+                            05/08/2026
+                        </span>
+
+                        <i class="fa-solid fa-chevron-right seta-item"></i>
+
+                    </div>
+
+                    <div class="mensagem-item">
+
+                        <div class="item-icone roxo-fundo">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <div class="item-info">
+
+                            <div class="item-titulo">
+
+                                <strong>
+                                    Programa de bem-estar
+                                </strong>
+
+                                <span class="categoria roxo-status">
+                                    Ideia
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Criar um programa de bem-estar...
+                            </p>
+
+                        </div>
+
+                        <span class="status implementado">
+                            Implementado
+                        </span>
+
+                        <span class="data">
+                            02/08/2026
+                        </span>
+
+                        <i class="fa-solid fa-chevron-right seta-item"></i>
+
+                    </div>
+
+                </section>
+
+                <section class="banner">
+
+                    <div class="coracao">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div class="banner-texto">
+
+                        <h2>
+                            Seu feedback é muito importante!
+                        </h2>
+
+                        <p>
+                            Todas as mensagens são recebidas com atenção e ajudam a tornar nosso ambiente cada vez melhor.
+                        </p>
+
+                    </div>
+
+                    <div class="pessoas">
+
+                        <div class="pessoa pessoa-roxa"></div>
+
+                        <div class="pessoa pessoa-verde"></div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

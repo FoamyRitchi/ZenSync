@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenSync | Agenda</title>
+    <link rel="stylesheet" href="Agenda.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+               <a href="AreaEmp.html" class="logo-area">
+    <img src="imagem/logoaolado,png.png" alt="ZenSync" class="logo-image">
+</a>
+                <div class="topbar-actions">
+
+                    <button class="notification-button" id="notificationButton">
+                        ♧
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="user-area">
+
+                        <div class="user-avatar">
+                            LP
+                        </div>
+
+                        <div class="user-info">
+                            <strong>Olá, Gestor(a)!</strong>
+                            <span>RH</span>
+                        </div>
+
+                        <span class="user-arrow">⌄</span>
+
+                    </div>
+
+                    <a href="/AREA EMPRESA/AreaEmp.html" class="logout-button">
+                        <span>⇥</span>
+                        <span>Sair</span>
+                    </a>
+
+                </div>
+
+            </header>
+
+            <section class="page-header">
+
+                <div>
+                    <h1>Agendamento de consultas</h1>
+
+                    <p>
+                        Encontre profissionais credenciados e agende um atendimento para o funcionário.
+                    </p>
+                </div>
+
+                <div class="header-date">
+                    <span>◷</span>
+                    <span id="currentDate"></span>
+                    <span>⌄</span>
+                </div>
+
+            </section>
+
+            <section class="content">
+
+                <div class="section-title">
+
+                    <div>
+                        <h2>Atendimentos disponíveis</h2>
+
+                        <p>
+                            Profissionais credenciados disponíveis para atendimento.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card green-card">
+
+                        <div class="stat-icon green-icon">
+                            ♙
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>Profissionais disponíveis</span>
+
+                            <strong>18</strong>
+
+                            <small>
+                                credenciados pelo ZenSync
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card yellow-card">
+
+                        <div class="stat-icon yellow-icon">
+                            ◷
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>Atendimentos agendados</span>
+
+                            <strong id="scheduledCount">
+                                42
+                            </strong>
+
+                            <small>
+                                neste mês
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card purple-card">
+
+                        <div class="stat-icon purple-icon">
+                            ♧
+                        </div>
+
+                        <div class="stat-content">
+
+                            <span>Modalidades</span>
+
+                            <strong>2</strong>
+
+                            <small>
+                                online e presencial
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <section class="professionals-section">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <h2>Profissionais credenciados</h2>
+
+                            <p>
+                                Escolha um profissional para realizar o agendamento.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="filters">
+
+                        <div class="search-box">
+
+                            <span>⌕</span>
+
+                            <input
+                                type="text"
+                                id="searchProfessional"
+                                placeholder="Buscar profissional"
+                            >
+
+                        </div>
+
+                        <select id="specialtyFilter">
+
+                            <option value="">
+                                Especialidade
+                            </option>
+
+                            <option value="Psicologia">
+                                Psicologia
+                            </option>
+
+                            <option value="Psicoterapia">
+                                Psicoterapia
+                            </option>
+
+                            <option value="Orientação profissional">
+                                Orientação profissional
+                            </option>
+
+                            <option value="Saúde emocional">
+                                Saúde emocional
+                            </option>
+
+                        </select>
+
+                        <select id="modalityFilter">
+
+                            <option value="">
+                                Modalidade
+                            </option>
+
+                            <option value="Online">
+                                Online
+                            </option>
+
+                            <option value="Presencial">
+                                Presencial
+                            </option>
+
+                        </select>
+
+                        <select id="availabilityFilter">
+
+                            <option value="">
+                                Disponibilidade
+                            </option>
+
+                            <option value="Hoje">
+                                Hoje
+                            </option>
+
+                            <option value="Amanhã">
+                                Amanhã
+                            </option>
+
+                            <option value="Esta semana">
+                                Esta semana
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div
+                        class="professionals-grid"
+                        id="professionalsGrid"
+                    ></div>
+
+                    <div
+                        class="empty-state"
+                        id="emptyState"
+                    >
+
+                        <div>⌕</div>
+
+                        <h3>
+                            Nenhum profissional encontrado
+                        </h3>
+
+                        <p>
+                            Tente alterar os filtros ou o termo pesquisado.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section class="appointments-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Próximos agendamentos
+                            </h2>
+
+                            <p>
+                                Confira os atendimentos programados.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="appointments-list"
+                        id="appointmentsList"
+                    ></div>
+
+                </section>
+
+                
+
+                    <div>
+
+                      
+
+                       
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <div
+        class="modal-overlay"
+        id="appointmentModal"
+    >
+
+        <div class="appointment-modal">
+
+            <button
+                class="close-modal"
+                id="closeModal"
+            >
+                ×
+            </button>
+
+            <div class="modal-header">
+
+                <div class="modal-icon">
+                    ◷
+                </div>
+
+                <div>
+
+                    <h2>
+                        Agendar atendimento
+                    </h2>
+
+                    <p>
+                        Preencha os dados do funcionário.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div
+                class="selected-professional"
+                id="selectedProfessional"
+            ></div>
+
+            <form id="appointmentForm">
+
+                <div class="form-group">
+
+                    <label for="employeeName">
+                        Nome do funcionário <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="employeeName"
+                        placeholder="Digite o nome completo"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="employeePhone">
+                        Telefone <span>*</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="employeePhone"
+                        placeholder="(00) 00000-0000"
+                        maxlength="15"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="appointmentModality">
+                            Modalidade <span>*</span>
+                        </label>
+
+                        <select
+                            id="appointmentModality"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="Online">
+                                Online
+                            </option>
+
+                            <option value="Presencial">
+                                Presencial
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="appointmentDate">
+                            Data <span>*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            id="appointmentDate"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="appointmentTime">
+                        Horário <span>*</span>
+                    </label>
+
+                    <select
+                        id="appointmentTime"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione um horário
+                        </option>
+
+                        <option value="08:00">08:00</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="appointmentObservation">
+                        Observação
+                    </label>
+
+                    <textarea
+                        id="appointmentObservation"
+                        placeholder="Digite uma observação, se necessário..."
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="cancel-button"
+                        id="cancelAppointment"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="confirm-button"
+                    >
+                        Confirmar agendamento
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div
+        class="success-toast"
+        id="successToast"
+    >
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <div>
+
+            <strong>
+                Agendamento realizado com sucesso!
+            </strong>
+
+            <p id="successMessage"></p>
+
+        </div>
+
+        <button id="closeToast">
+            ×
+        </button>
+
+    </div>
+
+    <script src="Agenda.js"></script>
+
+</body>
+</html>

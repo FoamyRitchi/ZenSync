@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZenSync | Área da Empresa</title>
+
+    <link rel="stylesheet" href="AreaEmp.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="image/logoaolado,png.png" alt="ZenSync">
+            </div>
+        </div>
+
+        <nav class="side-nav">
+
+            <a href="AreaEmp.html" class="nav-item active">
+                <span>⌂</span>
+                <span>Início</span>
+            </a>
+
+            <a href="pendencias.html" class="nav-item">
+                <span>◷</span>
+                <span>Pendências</span>
+            </a>
+
+            <a href="resumo.html" class="nav-item">
+                <span>▣</span>
+                <span>Resumo semanal</span>
+            </a>
+
+            <a href="../Agendas/Agenda.html" class="nav-item">
+                <span>☷</span>
+                <span>Agenda</span>
+            </a>
+
+            <a href="setores.html" class="nav-item">
+                <span>♧</span>
+                <span>Setores</span>
+            </a>
+
+            <a href="funcionarios.html" class="nav-item">
+                <span>♙</span>
+                <span>Área / Funcionários</span>
+            </a>
+
+        </nav>
+
+        <button class="logout-btn" id="logoutBtn">
+            <span>↪</span>
+            <span>Sair</span>
+        </button>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <nav class="top-nav">
+
+                <a href="AreaEmp.html">
+                    Home
+                </a>
+
+                <a href="sugestoes.html">
+                    Sugestões e ideias
+                </a>
+
+                <a href="relatorio.html">
+                    Relatórios
+                </a>
+
+            </nav>
+
+
+            <div class="profile-area">
+
+                <button class="notification-btn" id="notificationBtn" aria-label="Notificações">
+                    ♢
+                    <i></i>
+                </button>
+
+
+                <button class="profile-btn" id="profileBtn">
+
+                    <div class="avatar">
+                        LP
+                    </div>
+
+                    <div class="profile-text">
+
+                       
+
+                     
+                        <small>
+                            Área da empresa
+                        </small>
+
+                    </div>
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </button>
+
+
+                <div class="profile-menu" id="profileMenu">
+
+                    <a href="perfil.html">
+                        Meu perfil
+                    </a>
+
+                    <a href="configuracoes.html">
+                        Configurações
+                    </a>
+
+                    <button id="profileLogout">
+                        Sair
+                    </button>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="content">
+
+            <header class="page-header">
+
+                <div>
+
+                    <div class="title-row">
+
+                        <h1>
+                            Visão geral
+                        </h1>
+
+                        <span class="tag">
+                            ZENSYNC
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Acompanhe os principais indicadores de bem-estar
+                        e clima organizacional da sua equipe.
+                    </p>
+
+                </div>
+
+
+                <div class="filters">
+
+                    <button class="date-btn" id="dateLabel">
+                        01/05/2024 - 31/05/2024
+                    </button>
+
+                    <button class="filter-btn" id="filterButton">
+                        ⚙ Filtros
+                    </button>
+
+
+                    <div class="filter-panel" id="filterPanel">
+
+                        <h3>
+                            Filtrar indicadores
+                        </h3>
+
+                        <label>
+                            Data inicial
+
+                            <input
+                                type="date"
+                                id="startDate"
+                                value="2024-05-01">
+                        </label>
+
+
+                        <label>
+                            Data final
+
+                            <input
+                                type="date"
+                                id="endDate"
+                                value="2024-05-31">
+                        </label>
+
+
+                        <label>
+                            Departamento
+
+                            <select id="departmentFilter">
+
+                                <option value="todos">
+                                    Todos
+                                </option>
+
+                                <option value="marketing">
+                                    Marketing
+                                </option>
+
+                                <option value="vendas">
+                                    Vendas
+                                </option>
+
+                                <option value="operacoes">
+                                    Operações
+                                </option>
+
+                                <option value="tecnologia">
+                                    Tecnologia
+                                </option>
+
+                                <option value="financeiro">
+                                    Financeiro
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+                        <label>
+                            Status
+
+                            <select id="statusFilter">
+
+                                <option value="todos">
+                                    Todos
+                                </option>
+
+                                <option value="normal">
+                                    Normal
+                                </option>
+
+                                <option value="atencao">
+                                    Atenção
+                                </option>
+
+                                <option value="critico">
+                                    Crítico
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+                        <div class="filter-actions">
+
+                            <button id="clearFilters">
+                                Limpar
+                            </button>
+
+                            <button id="applyFilters">
+                                Aplicar filtros
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <section class="metrics">
+
+                <div class="metric-card clickable">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon green-icon">
+                            ☺
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Humor médio da equipe
+                            </h3>
+
+                            <strong>
+                                7,8
+                                <small>/10</small>
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <p class="positive">
+                        ↑ 4,2% em relação ao período anterior
+                    </p>
+
+                </div>
+
+
+                <div class="metric-card clickable">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon orange-icon">
+                            ◌
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Nível médio de estresse
+                            </h3>
+
+                            <strong>
+                                5,4
+                                <small>/10</small>
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <p class="negative">
+                        ↑ 2,1% em relação ao período anterior
+                    </p>
+
+                </div>
+
+
+                <div class="metric-card clickable">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon purple-icon">
+                            ↗
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Participação
+                            </h3>
+
+                            <strong>
+                                72
+                                <small>%</small>
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <p class="positive">
+                        ↑ 6,8% em relação ao período anterior
+                    </p>
+
+                </div>
+
+
+                <div class="metric-card clickable">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon blue-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Check-ins realizados
+                            </h3>
+
+                            <strong>
+                                1.248
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <p class="blue-text">
+                        Neste período
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-grid">
+
+                <div class="left-column">
+
+                    <div class="panel">
+
+                        <h2>
+                            Indicadores de bem-estar
+                        </h2>
+
+                        <div class="charts">
+
+                            <div class="chart-box">
+
+                                <h3>
+                                    Distribuição de humor
+                                </h3>
+
+                                <div class="donut-area">
+
+                                    <div class="donut">
+
+                                        <div>
+
+                                            <strong>
+                                                7,8
+                                            </strong>
+
+                                            <span>
+                                                média
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="legend">
+
+                                        <div>
+                                            <i class="red"></i>
+                                            <span>Muito baixo</span>
+                                            <b>8%</b>
+                                        </div>
+
+                                        <div>
+                                            <i class="orange"></i>
+                                            <span>Baixo</span>
+                                            <b>12%</b>
+                                        </div>
+
+                                        <div>
+                                            <i class="yellow"></i>
+                                            <span>Moderado</span>
+                                            <b>25%</b>
+                                        </div>
+
+                                        <div>
+                                            <i class="green-dot"></i>
+                                            <span>Bom</span>
+                                            <b>32%</b>
+                                        </div>
+
+                                        <div>
+                                            <i class="dark-green"></i>
+                                            <span>Muito bom</span>
+                                            <b>23%</b>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="chart-box">
+
+                                <h3>
+                                    Níveis de estresse
+                                </h3>
+
+                                <div class="bar-chart">
+
+                                    <div class="bar-item">
+                                        <span>8%</span>
+                                        <div class="bar very-low"></div>
+                                        <small>Muito baixo</small>
+                                    </div>
+
+                                    <div class="bar-item">
+                                        <span>18%</span>
+                                        <div class="bar low"></div>
+                                        <small>Baixo</small>
+                                    </div>
+
+                                    <div class="bar-item">
+                                        <span>31%</span>
+                                        <div class="bar medium"></div>
+                                        <small>Moderado</small>
+                                    </div>
+
+                                    <div class="bar-item">
+                                        <span>27%</span>
+                                        <div class="bar high"></div>
+                                        <small>Alto</small>
+                                    </div>
+
+                                    <div class="bar-item">
+                                        <span>16%</span>
+                                        <div class="bar very-high"></div>
+                                        <small>Muito alto</small>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="bottom-grid">
+
+                        <div class="panel department">
+
+                            <div class="section-title">
+
+                                <h2>
+                                    Indicadores por departamento
+                                </h2>
+
+                            </div>
+
+
+                            <table>
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Departamento</th>
+                                        <th>Humor</th>
+                                        <th>Estresse</th>
+                                        <th>Participação</th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>Marketing</td>
+                                        <td>8,2</td>
+                                        <td>4,1</td>
+                                        <td>86%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Vendas</td>
+                                        <td>7,6</td>
+                                        <td>5,2</td>
+                                        <td>78%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Operações</td>
+                                        <td>7,1</td>
+                                        <td>5,6</td>
+                                        <td>70%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Tecnologia</td>
+                                        <td>6,4</td>
+                                        <td>6,3</td>
+                                        <td>68%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Financeiro</td>
+                                        <td>7,0</td>
+                                        <td>4,7</td>
+                                        <td>75%</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+
+                            <a
+                                href="Relatorio/relatorio.html"
+                                class="BtnRelatorio">
+                                Ver relatório completo
+                            </a>
+
+                        </div>
+
+
+                        <div class="panel">
+
+                            <h2>
+                                Evolução dos indicadores
+                            </h2>
+
+
+                            <div class="line-legend">
+
+                                <span>
+                                    <i class="line-green"></i>
+                                    Humor
+                                </span>
+
+                                <span>
+                                    <i class="line-orange"></i>
+                                    Estresse
+                                </span>
+
+                                <span>
+                                    <i class="line-purple"></i>
+                                    Participação
+                                </span>
+
+                            </div>
+
+
+                            <div class="graph">
+
+                                <svg
+                                    viewBox="0 0 600 145"
+                                    preserveAspectRatio="none">
+
+                                    <polyline
+                                        points="0,105 80,92 160,98 240,70 320,76 400,58 480,63 600,42">
+                                    </polyline>
+
+                                    <polyline
+                                        class="orange-line"
+                                        points="0,50 80,62 160,57 240,76 320,70 400,82 480,77 600,91">
+                                    </polyline>
+
+                                    <polyline
+                                        class="purple-line"
+                                        points="0,118 80,105 160,108 240,92 320,88 400,76 480,70 600,57">
+                                    </polyline>
+
+                                </svg>
+
+
+                                <div class="graph-dates">
+
+                                    <span>01/05</span>
+                                    <span>05/05</span>
+                                    <span>10/05</span>
+                                    <span>15/05</span>
+                                    <span>20/05</span>
+                                    <span>25/05</span>
+                                    <span>31/05</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="right-column">
+
+                    <section class="alerts">
+
+                        <div class="section-title">
+
+                            <h2>
+                                Alertas e insights
+                            </h2>
+
+                            <button id="allAlerts">
+                                Ver todos
+                            </button>
+
+                        </div>
+
+
+                        <button class="alert-card alert-red">
+
+                            <span class="alert-icon">
+                                !
+                            </span>
+
+                            <span>
+                                <strong>Tecnologia</strong>
+
+                                <small>
+                                    Maior nível de estresse da empresa.
+                                </small>
+                            </span>
+
+                            <b>›</b>
+
+                        </button>
+
+
+                        <button class="alert-card alert-orange">
+
+                            <span class="alert-icon">
+                                !
+                            </span>
+
+                            <span>
+                                <strong>Operações</strong>
+
+                                <small>
+                                    Participação abaixo da média.
+                                </small>
+                            </span>
+
+                            <b>›</b>
+
+                        </button>
+
+
+                        <button class="alert-card alert-green">
+
+                            <span class="alert-icon">
+                                ✓
+                            </span>
+
+                            <span>
+                                <strong>Marketing</strong>
+
+                                <small>
+                                    Melhor resultado geral.
+                                </small>
+                            </span>
+
+                            <b>›</b>
+
+                        </button>
+
+                    </section>
+
+
+                    <section class="actions">
+
+                        <div class="section-title">
+
+                            <h2>
+                                Ações recomendadas
+                            </h2>
+
+                        </div>
+
+
+                        <div class="action-card">
+
+                            <div class="action-icon purple-bg">
+                                ♡
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Acompanhar Tecnologia
+                                </strong>
+
+                                <small>
+                                    Verifique os indicadores de estresse
+                                    do setor.
+                                </small>
+
+                            </div>
+
+                            <b>›</b>
+
+                        </div>
+
+
+                        <div class="action-card">
+
+                            <div class="action-icon green-bg">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Incentivar check-ins
+                                </strong>
+
+                                <small>
+                                    Aumente a participação dos colaboradores.
+                                </small>
+
+                            </div>
+
+                            <b>›</b>
+
+                        </div>
+
+
+                        <div class="action-card">
+
+                            <div class="action-icon blue-bg">
+                                ◉
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Consultar relatório
+                                </strong>
+
+                                <small>
+                                    Analise os dados do período atual.
+                                </small>
+
+                            </div>
+
+                            <b>›</b>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+
+            <section class="privacy">
+
+                <div class="privacy-info">
+
+                    <div class="lock">
+                        ♢
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Dados protegidos e anônimos
+                        </strong>
+
+                        <span>
+                            As informações apresentadas são consolidadas
+                            e não identificam individualmente os colaboradores.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button id="exportBtn">
+                    ↓ Exportar relatório
+                </button>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<div class="modal-overlay" id="modal">
+
+    <div class="modal">
+
+        <button class="modal-close" id="modalClose">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            i
+        </div>
+
+        <h2 id="modalTitle">
+            Informação
+        </h2>
+
+        <p id="modalText">
+            Informações do sistema.
+        </p>
+
+        <button class="modal-confirm" id="modalConfirm">
+            Entendi
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="logout-modal" id="logoutModal">
+
+    <div class="logout-box">
+
+        <div class="logout-icon">
+            ↪
+        </div>
+
+        <h2>
+            Sair do acesso?
+        </h2>
+
+        <p>
+            Tem certeza de que deseja sair do seu acesso à área da empresa?
+        </p>
+
+        <div class="logout-actions">
+
+            <button id="cancelLogout">
+                Cancelar
+            </button>
+
+            <a href="../Pagina - inicial/pagina.html" id="confirmLogout">
+                Sair
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="toast" id="toast"></div>
+
+
+<script src="AreaEmp.js"></script>
+
+</body>
+
+</html>
